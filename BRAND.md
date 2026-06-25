@@ -159,24 +159,28 @@ a bright, optimistic, human palette, not a dark "tech" one.
 
 ### 3.2 Typography
 
-The wordmark is a **geometric, rounded, friendly sans** (circular `O`s, soft
-terminals). Match it: a geometric rounded sans for display, a clean readable
-sans for body.
+**Poppins is the brand typeface, used generally.** It is a geometric, rounded,
+friendly sans (circular `O`s, soft terminals) that matches the wordmark. Use it
+across headlines, body, labels, and data. Vary weight, not family.
 
-| Role | Typeface (intended) | Fallback stack | Treatment |
+| Role | Typeface | Weight | Treatment |
 |---|---|---|---|
-| **Display / Headlines** | **Poppins** (or Quicksand, Nunito), weight **600–700** | `Poppins, "Trebuchet MS", system-ui, sans-serif` | Friendly and confident. Slightly tight tracking on large sizes. `text-wrap: balance`. |
-| **Body** | **Inter** (or Open Sans), weight **400/500** | `Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif` | Line-height 1.5 to 1.65, roughly 65-character measure. |
-| **Eyebrow / Label** | Display face, weight **600**, **UPPERCASE**, letter-spacing `0.1em` | (as display) | Small section tags. |
-| **Data / Numbers** | Body face with `tabular-nums` | (as body) | Aligned figures for metrics. We sell measurable growth. |
+| **Display / Headlines** | **Poppins** | **600–700** (SemiBold / Bold) | Friendly and confident. Slightly tight tracking on large sizes. `text-wrap: balance`. |
+| **Body** | **Poppins** | **400–500** (Regular / Medium) | Line-height 1.5 to 1.65, roughly 65-character measure. |
+| **Eyebrow / Label** | **Poppins** | **600**, **UPPERCASE**, letter-spacing `0.1em` | Small section tags. |
+| **Data / Numbers** | **Poppins** with `tabular-nums` | 500–700 | Aligned figures for metrics. We sell measurable growth. |
+
+**Fallback stack** (when Poppins isn't available, e.g. inside an email or a
+locked-down tool): `Poppins, "Trebuchet MS", "Segoe UI", system-ui, sans-serif`.
 
 **Type scale (1.25 ratio):** 13 · 16 (base) · 20 · 25 · 31 · 39 · 49 · 61 px.
 
 **Rules**
+- One family (Poppins) everywhere. Create hierarchy with **weight and size**,
+  not by switching typefaces.
 - Headlines are rounded and friendly, never harsh or condensed. The geometry
   echoes the logo.
-- One display weight and one body weight per layout.
-- Don't set long body copy in the rounded display face. It is for headlines and
+- Keep body weight at 400–500 for readability. Reserve 600–700 for headlines and
   labels.
 
 ### 3.3 Logo & wordmark usage
@@ -189,12 +193,17 @@ elsewhere (buttons, tags) but never crowd or distort the mark itself.
 - Wordmark reads **FOMO.ai**: `FOMO` in heavy rounded caps, `.ai` set tighter as
   the suffix. Lowercase `.ai`, always.
 - Enclosed in a **stadium pill** with fully rounded ends.
+- The pill is divided by a **curved (not straight) divider**, set off-center so
+  the `FOMO` field is the larger left portion and `.ai` sits in the smaller
+  right portion. The curve is the signature detail. Keep it, and keep it
+  off-center.
 
 **Approved lockups**
-- **On black:** black ground, white pill outline, white `FOMO`, white `.ai`.
-- **On white:** the pill split, with the left half filled Black holding white
-  `FOMO` and the right half white holding black `.ai`. (This two-tone "split
-  capsule" is the primary mark.)
+- **On white (primary):** the two-tone "split capsule." Larger left field filled
+  Black holding white `FOMO`, smaller right field white holding black `.ai`,
+  divided by the curve.
+- **On black:** black ground, white pill outline, white wordmark, with the
+  curved divider drawn as a white line.
 - **Single-color:** all-black on light, all-white on dark, when print or
   contrast demands it.
 

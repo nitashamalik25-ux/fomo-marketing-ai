@@ -9,7 +9,7 @@
     --black:#0E1116; --white:#FFFFFF; --grey:#5B6B7B;
     --line:#E2E8F0;
     --display:"Poppins","Trebuchet MS","Segoe UI",system-ui,sans-serif;
-    --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --body:"Poppins","Trebuchet MS","Segoe UI",system-ui,sans-serif;
     --rail:min(1080px,92vw);
   }
   *{box-sizing:border-box}
@@ -31,16 +31,10 @@
     padding:7px 14px;border-radius:999px;background:var(--sky);color:var(--blue)}
   .eyebrow .num{font-variant-numeric:tabular-nums}
 
-  /* logo pill */
-  .logo{display:inline-flex;align-items:stretch;border:2.5px solid var(--black);
-    border-radius:999px;overflow:hidden;font-family:var(--display);font-weight:700;
-    line-height:1;font-size:22px;letter-spacing:-.01em}
-  .logo .l{background:var(--black);color:#fff;padding:.5em .55em .5em .8em}
-  .logo .r{background:#fff;color:var(--black);padding:.5em .8em .5em .5em}
-  .logo.lg{font-size:34px}
-  .logo.ondark{border-color:#fff}
-  .logo.ondark .l{background:transparent;color:#fff;padding-right:.5em}
-  .logo.ondark .r{background:transparent;color:#fff;padding-left:.5em}
+  /* logo (SVG, curved split capsule) */
+  .logo{height:30px;aspect-ratio:320/110;width:auto;display:inline-block;vertical-align:middle;color:var(--black)}
+  .logo.lg{height:54px}
+  .logo text{font-family:var(--display);font-weight:700;letter-spacing:-1px}
 
   /* HERO */
   header{background:
@@ -195,11 +189,26 @@
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="logo-split" viewBox="0 0 320 110">
+    <rect x="3.5" y="3.5" width="313" height="103" rx="51.5" fill="#fff" stroke="#0E1116" stroke-width="6"/>
+    <path d="M205,3.5 C226,33 159,77 178,106.5 L55,106.5 A51.5,51.5 0 0 1 55,3.5 Z" fill="#0E1116"/>
+    <text x="103" y="57" fill="#fff" font-size="46" text-anchor="middle" dominant-baseline="central">FOMO</text>
+    <text x="256" y="59" fill="#0E1116" font-size="38" text-anchor="middle" dominant-baseline="central">.ai</text>
+  </symbol>
+  <symbol id="logo-mono" viewBox="0 0 320 110">
+    <rect x="3.5" y="3.5" width="313" height="103" rx="51.5" fill="none" stroke="currentColor" stroke-width="6"/>
+    <path d="M205,3.5 C226,33 159,77 178,106.5" fill="none" stroke="currentColor" stroke-width="6"/>
+    <text x="103" y="57" fill="currentColor" font-size="46" text-anchor="middle" dominant-baseline="central">FOMO</text>
+    <text x="256" y="59" fill="currentColor" font-size="38" text-anchor="middle" dominant-baseline="central">.ai</text>
+  </symbol>
+</svg>
+
 <header>
   <div class="rail">
     <div class="topbar">
-      <span class="logo"><span class="l">FOMO</span><span class="r">.ai</span></span>
-      <span>Brand Design System &amp; Voice · v2</span>
+      <svg class="logo" role="img" aria-label="FOMO.ai logo"><use href="#logo-split"/></svg>
+      <span>Brand Design System &amp; Voice · v3</span>
     </div>
     <div class="hero">
       <span class="eyebrow"><span class="num">◆</span> The new growth playbook</span>
@@ -304,19 +313,19 @@
     <div class="sec-head">
       <span class="eyebrow"><span class="num">04</span> Logo</span>
       <h2>The split-capsule wordmark.</h2>
-      <p>FOMO<b>.ai</b> inside a rounded stadium pill, the signature shape. Echo the capsule in buttons and tags; never distort the mark itself.</p>
+      <p>FOMO<b>.ai</b> inside a rounded stadium pill, divided by an off-center <b>curve</b> (FOMO in the larger left field, .ai in the smaller right). The curve is the signature detail. Echo the capsule in buttons and tags; never distort the mark itself.</p>
     </div>
     <div class="logo-grid">
       <div class="logo-cell" style="background:#fff">
-        <span class="logo lg"><span class="l">FOMO</span><span class="r">.ai</span></span>
-        <span class="cap">On white · split capsule (primary)</span>
+        <svg class="logo lg" role="img" aria-label="FOMO.ai logo"><use href="#logo-split"/></svg>
+        <span class="cap">On white · curved split capsule (primary)</span>
       </div>
       <div class="logo-cell dark">
-        <span class="logo lg ondark"><span class="l">FOMO</span><span class="r">.ai</span></span>
-        <span class="cap">On black · outline + white</span>
+        <svg class="logo lg" style="color:#fff" role="img" aria-label="FOMO.ai logo"><use href="#logo-mono"/></svg>
+        <span class="cap">On black · white outline + curved divider</span>
       </div>
       <div class="logo-cell navy">
-        <span class="logo lg ondark"><span class="l">FOMO</span><span class="r">.ai</span></span>
+        <svg class="logo lg" style="color:#fff" role="img" aria-label="FOMO.ai logo"><use href="#logo-mono"/></svg>
         <span class="cap">Brand-color fill · mono wordmark</span>
       </div>
     </div>
@@ -487,7 +496,7 @@
 
 <footer>
   <div class="rail">
-    <span class="logo ondark" style="border-color:rgba(255,255,255,.6)"><span class="l">FOMO</span><span class="r">.ai</span></span>
+    <svg class="logo" style="color:#fff" role="img" aria-label="FOMO.ai logo"><use href="#logo-mono"/></svg>
     <span>Brand source of truth · pair with <b style="color:#fff">BRAND.md</b> for AI tooling · v2 · 2026</span>
   </div>
 </footer>
