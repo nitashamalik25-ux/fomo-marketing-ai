@@ -189,23 +189,24 @@ The logo is the **"FOMO.ai" wordmark inside a stadium (pill or capsule)
 outline**: rounded, bold, friendly. The capsule is the signature shape. Echo it
 elsewhere (buttons, tags) but never crowd or distort the mark itself.
 
-**Construction**
-- Wordmark reads **FOMO.ai**: `FOMO` in heavy rounded caps, `.ai` set tighter as
-  the suffix. Lowercase `.ai`, always.
-- Enclosed in a **stadium pill** with fully rounded ends.
-- The pill is divided by a **curved (not straight) divider**, set off-center so
-  the `FOMO` field is the larger left portion and `.ai` sits in the smaller
-  right portion. The curve is the signature detail. Keep it, and keep it
-  off-center.
+**Construction (a pill within a pill)**
+- An **outer stadium capsule** (thin outline, fully rounded ends) frames the
+  whole mark.
+- Inside sits a **solid inner pill** on the left, holding `FOMO` in reversed
+  (white) heavy rounded caps. The inner pill's rounded right end is the signature
+  **curve** between the dark `FOMO` block and the open `.ai`.
+- `.ai` sits to the right of the inner pill, on the open background. Lowercase,
+  always present.
+- The inner pill is off-center: `FOMO` takes the larger left portion (roughly
+  60%), `.ai` the smaller right.
 
 **Approved lockups**
-- **On white (primary):** the two-tone "split capsule." Larger left field filled
-  Black holding white `FOMO`, smaller right field white holding black `.ai`,
-  divided by the curve.
-- **On black:** black ground, white pill outline, white wordmark, with the
-  curved divider drawn as a white line.
-- **Single-color:** all-black on light, all-white on dark, when print or
-  contrast demands it.
+- **On white (primary):** white outer capsule with a thin black outline, a solid
+  black inner pill holding white `FOMO`, and black `.ai` on the white.
+- **On black:** black ground, white outer outline, white inner-pill outline,
+  white `FOMO` and `.ai`.
+- **Single-color:** all-black on light, all-white on dark, when print or contrast
+  demands it.
 
 **Rules**
 - **Clear space:** at least the height of the `O` on all sides.
