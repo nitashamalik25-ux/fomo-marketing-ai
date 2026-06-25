@@ -98,100 +98,145 @@ team.
 
 ## 3. Visual Identity
 
-> **Status:** Proposed system, grounded in the current fomo.ai look and ready to
-> refine against finalized brand assets. Hex values are the source of truth for
-> all AI design tasks until a brand-kit file supersedes this.
+> **Status:** Official brand colors, logo, and illustration style — codified from
+> FOMO.ai's real assets. These hex values are the source of truth for every AI
+> design task.
 
 ### 3.1 Color palette
 
-**Core**
+FOMO.ai's identity is **blue + green** at its core — *trust meets growth* —
+warmed by **gold** (premium/value) and **coral** (energy, the FOMO spark). It is
+a bright, optimistic, human palette, not a dark "tech" one.
+
+**Primary — Blue & Teal (the brand leads with these)**
 
 | Token | Hex | Role |
 |---|---|---|
-| **Ink** | `#0C0F17` | Primary dark ground. Backgrounds, dark sections, footers. The default "FOMO is premium" surface. |
-| **Slate** | `#1B2230` | Elevated surfaces on dark — cards, panels, dividers. |
-| **Paper** | `#F5F6F8` | Primary light ground. Cool-biased off-white (never pure `#FFFFFF` for large fields). |
-| **Mist** | `#9AA4B2` | Muted/secondary text, captions, borders. Cool grey biased toward Ink. |
+| **Navy** | `#174D80` | Primary brand color. Headlines on light, depth, trust. The "serious" anchor. |
+| **Blue** | `#438AE8` | Primary action color. CTAs, links, buttons, interactive, key highlights. |
+| **Sky** | `#E9F2FE` | Soft blue surface — section backgrounds, cards, callouts. |
+| **Teal** | `#19866A` | Secondary brand color. Growth, results, the "AI Search works" signal. |
+| **Mint** | `#93DBC8` | Supporting fresh accent — tags, illustration fills, charts. |
+| **Mint Tint** | `#DDF8F1` | Soft teal surface. |
 
-**Accent**
+**Secondary — Green / Gold / Coral families (accents & states)**
+
+| Family | Hexes (deep · mid · tint) | Role |
+|---|---|---|
+| **Green** | `#0C8253` · `#63C383` · `#C3EDD2` | Growth, success, positive metrics, "results" storytelling. |
+| **Gold** | `#EBAA03` · `#FFE999` · `#FFF7DB` | Premium value, optimism, highlights, "early-mover" energy. |
+| **Coral** | `#CA390B` · `#EB6553` · `#FFEDEB` | Urgency, the FOMO spark, warm CTAs, attention. Use sparingly. |
+
+**Neutrals (from the logo & illustrations)**
 
 | Token | Hex | Role |
 |---|---|---|
-| **Pulse** | `#FF4D33` | THE brand accent. Urgency, momentum, CTAs, key highlights, the "FOMO" energy. Use boldly but in one place per view. |
-| **Volt** | `#15CEB6` | Secondary accent — "AI Search / fresh / data." Used sparingly for contrast, charts, secondary tags. Never competes with Pulse. |
-
-**Semantic (UI / data only — not brand accents)**
-
-| Token | Hex | Role |
-|---|---|---|
-| Success | `#1FB979` | Positive states, growth-up. |
-| Warning | `#F5B72E` | Caution, attention. |
-| Critical | `#E5484D` | Errors only (distinct from Pulse — never use Pulse for errors). |
+| **Black** | `#0E1116` | Logo, line illustrations, primary text on light. |
+| **White** | `#FFFFFF` | Primary ground. The brand lives mostly on white/light. |
+| **Slate Grey** | `#5B6B7B` | Muted/secondary text, captions, hairlines. |
 
 **Usage rules**
-- **One bold per view.** Pulse is the star; let everything else stay quiet.
-  Don't put Pulse and Volt at equal weight side by side.
-- **Contrast.** Pulse `#FF4D33` on Ink passes for large text/UI; for body-size
-  text on light grounds use Ink, not Pulse. Never set long copy in Pulse.
-- **Neutrals are chosen, not default.** Use Paper/Mist, not raw white/grey.
-- **Gradients:** allowed only as subtle Ink→Slate depth, or a faint Pulse glow.
-  **Never** a purple-to-blue tech gradient — it's the generic AI look we avoid.
+- **Blue leads; one accent per view.** `Blue #438AE8` is the default action
+  color. Bring in Teal/Green/Gold/Coral deliberately — don't fire all four at
+  equal weight in one layout.
+- **Color = meaning.** Blue = action/trust · Green/Teal = growth & results ·
+  Gold = value/premium · Coral = urgency/attention. Stay consistent so the
+  palette teaches the reader.
+- **Light by default.** FOMO lives on white and soft tints (`Sky`, `Mint Tint`,
+  `Gold #FFF7DB`, `Coral #FFEDEB`). Navy is for type and depth, not big fields.
+- **Contrast.** Set body copy in Black or Navy, never in Blue/Gold/Coral. Blue
+  on white passes for large text & UI; check small text.
+- **Gradients:** keep subtle — Blue→Teal or Sky→Mint within the family. **Never**
+  a generic purple→blue "AI" gradient.
 
 ### 3.2 Typography
 
-The personality comes from **weight contrast and scale**, not decorative fonts.
+The wordmark is a **geometric, rounded, friendly sans** (circular `O`s, soft
+terminals). Match it: a geometric rounded sans for display, a clean readable
+sans for body.
 
-| Role | Stack | Treatment |
-|---|---|---|
-| **Display / Headlines** | `"Helvetica Neue", Helvetica, Arial, system-ui, sans-serif`, weight **800** | Tight tracking (`-0.02em` to `-0.03em`), large scale, `text-wrap: balance`. Confident, dense, grotesque. |
-| **Body** | `system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`, weight **400/500** | Comfortable line-height (1.5–1.65), ~65-char measure. |
-| **Eyebrow / Label** | Same as body, weight **600**, **UPPERCASE**, letter-spacing `0.12em` | Small, used to tag sections. |
-| **Data / Tokens** | `ui-monospace, "SF Mono", Menlo, Consolas, monospace` | Hex codes, metrics, code. Use `tabular-nums` for aligned figures. |
+| Role | Typeface (intended) | Fallback stack | Treatment |
+|---|---|---|---|
+| **Display / Headlines** | **Poppins** (or Quicksand / Nunito) — geometric, rounded, weight **600–700** | `Poppins, "Trebuchet MS", system-ui, sans-serif` | Friendly and confident. Slightly tight tracking on large sizes. `text-wrap: balance`. |
+| **Body** | **Inter** (or Open Sans) — weight **400/500** | `Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif` | Line-height 1.5–1.65, ~65-char measure. |
+| **Eyebrow / Label** | Display face, weight **600**, **UPPERCASE**, letter-spacing `0.1em` | — | Small section tags. |
+| **Data / Numbers** | Body face with `tabular-nums` | — | Aligned figures for metrics — we sell measurable growth. |
 
 **Type scale (1.25 ratio):** 13 · 16 (base) · 20 · 25 · 31 · 39 · 49 · 61 px.
 
 **Rules**
-- Headlines are heavy and tight; body is calm and readable. The contrast *is*
-  the identity.
-- One display weight, one body weight per layout. Resist mixing many weights.
-- Numbers/metrics in mono with tabular figures — we sell measurable growth, so
-  data should look precise.
+- Headlines are rounded and friendly, never harsh or condensed. The geometry
+  echoes the logo.
+- One display weight, one body weight per layout.
+- Don't set long body copy in the rounded display face — it's for headlines and
+  labels.
 
 ### 3.3 Logo & wordmark usage
 
-> Final logo files to be added to `/assets`. Rules below apply regardless.
+The logo is the **"FOMO.ai" wordmark inside a stadium (pill/capsule) outline** —
+rounded, bold, friendly. The capsule is the signature shape; echo it elsewhere
+(buttons, tags) but never crowd or distort the mark itself.
 
-- **Wordmark:** "FOMO.ai" — set **FOMO** in heavy display, **.ai** in the same
-  weight but Pulse or Mist to mark the suffix. Lowercase ".ai".
-- **Clear space:** keep at least the cap-height of "F" of empty space on all
-  sides.
-- **Minimum size:** wordmark legible at 24px height on screen.
-- **On dark (preferred):** white wordmark, Pulse ".ai".
-- **On light:** Ink wordmark, Pulse ".ai".
-- **Don'ts:** don't stretch, recolor the whole mark to Pulse, add shadows/
-  outlines, place on busy imagery without a scrim, or rename to "Fomo AI" /
-  "FOMO AI" — it's always **FOMO.ai**.
+**Construction**
+- Wordmark reads **FOMO.ai** — `FOMO` in heavy rounded caps, `.ai` set tighter
+  as the suffix. Lowercase `.ai`, always.
+- Enclosed in a **stadium pill** with fully rounded ends.
 
-### 3.4 Layout & graphic language
-- **Generous space, premium calm.** Whitespace signals "expensive done
-  affordably." Don't crowd.
-- **Grids and rules** over decorative blobs. Thin Mist hairlines, Slate cards.
-- **Motion** (where relevant): purposeful and quick — a single page-load reveal
-  or a hover lift. Momentum, never busy.
-- **Imagery:** real dashboards, search results, and people — not generic robot/
-  glowing-brain AI stock.
-- **Iconography:** simple line icons, consistent stroke; Pulse only on the one
-  icon you want noticed.
+**Approved lockups**
+- **On black:** black ground, white pill outline, white `FOMO`, white `.ai`.
+- **On white:** the pill split — left half filled Black holding white `FOMO`,
+  right half white holding black `.ai`. (The two-tone "split capsule" is the
+  primary mark.)
+- **Single-color:** all-black on light, all-white on dark, when print/contrast
+  demands it.
+
+**Rules**
+- **Clear space:** at least the height of the `O` on all sides.
+- **Minimum size:** legible at 24px pill height on screen.
+- **Color:** brand colors may tint the pill *fill* (e.g. Navy or Blue capsule)
+  with white wordmark — but the wordmark itself stays mono (black or white).
+- **Don'ts:** don't stretch or rotate · don't add shadows/outlines/gradients ·
+  don't recolor individual letters · don't remove the pill · don't place on a
+  busy photo without a solid backing · never write "Fomo," "FOMO AI," or
+  "Fomo.ai" — it's always **FOMO.ai**.
+
+### 3.4 Illustration & graphic language
+
+> This is FOMO's most distinctive visual asset — lean on it.
+
+- **Signature illustration style:** **hand-drawn, black-and-white monoline
+  doodles** — loose, organic strokes; bold black fills; playful, human scenes of
+  people working *with* AI (chatbots, robots, devices, content, search). Quirky
+  and warm, never corporate.
+- **AI characters are on-brand** *in this style* — friendly doodle robots and
+  chat bubbles. (This is the one place "robots" are welcome — because they're
+  hand-drawn and charming, not glossy 3D stock.)
+- **Color + illustration:** illustrations stay black-and-white line art; color
+  comes from the brand palette around them (backgrounds, pills, type, accents).
+  Optionally spot-color a single element in Blue/Coral for emphasis.
+- **Shapes:** rounded everything — the stadium pill, rounded rectangles, circles.
+  Echo the logo's geometry.
+- **Layout:** bright, open, friendly. White space + soft tint blocks (`Sky`,
+  `Mint Tint`, `Gold #FFF7DB`). Generous, never cramped.
+- **Motion** (where relevant): playful but purposeful — a hover lift, a single
+  reveal. Bouncy easing fits the rounded, human personality; keep it light.
+- **Iconography:** simple rounded line icons, consistent stroke, matching the
+  doodle hand.
 
 ---
 
-## 4. The "Don't look AI-generated" guardrails (for design tasks)
+## 4. The "Don't look generic" guardrails (for design tasks)
 When briefing an AI design tool with this system, explicitly forbid:
-- Purple→blue gradient heroes.
-- Acid-green-on-black "tech" look.
-- Glowing brains, circuit boards, humanoid robots, blue holographic UI.
-- Everything centered; `rounded-lg` on everything; emoji as section markers.
-- Warm cream + serif + terracotta editorial cliché.
+- Purple→blue gradient "AI startup" heroes.
+- Glossy 3D robots, glowing brains, circuit boards, holographic blue UI — the
+  photoreal AI-stock look. (FOMO's robots are **hand-drawn black-and-white
+  doodles** instead.)
+- Dark "premium tech" grounds — FOMO is **bright and optimistic on white**.
+- Cold corporate stock photography of people in offices.
+- Firing all brand colors at once with no hierarchy; ignoring the color = meaning
+  system.
+- Sharp/condensed/harsh typography — the brand is **rounded and friendly**.
+- Dropping the pill/capsule motif or distorting the logo.
 
 Instead: Ink grounds, one Pulse accent, real product/results imagery, confident
 heavy headlines, calm space.

@@ -1,203 +1,216 @@
 <title>FOMO.ai — Brand System</title>
 <style>
   :root{
-    --ink:#0C0F17; --slate:#1B2230; --slate-2:#232C3D;
-    --paper:#F5F6F8; --mist:#9AA4B2; --mist-dim:#5C6675;
-    --pulse:#FF4D33; --volt:#15CEB6;
-    --success:#1FB979; --warning:#F5B72E; --critical:#E5484D;
-    --line:rgba(154,164,178,.16);
-    --display:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
-    --body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --navy:#174D80; --blue:#438AE8; --sky:#E9F2FE;
+    --teal:#19866A; --mint:#93DBC8; --mint-tint:#DDF8F1;
+    --green-d:#0C8253; --green:#63C383; --green-t:#C3EDD2;
+    --gold-d:#EBAA03; --gold:#FFE999; --gold-t:#FFF7DB;
+    --coral-d:#CA390B; --coral:#EB6553; --coral-t:#FFEDEB;
+    --black:#0E1116; --white:#FFFFFF; --grey:#5B6B7B;
+    --line:#E2E8F0;
+    --display:"Poppins","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+    --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     --rail:min(1080px,92vw);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    margin:0;background:var(--ink);color:var(--paper);
-    font-family:var(--body);font-size:16px;line-height:1.6;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  }
-  ::selection{background:var(--pulse);color:#fff}
-  a{color:inherit}
+  body{margin:0;background:var(--white);color:var(--black);
+    font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--blue);color:#fff}
   .rail{width:var(--rail);margin-inline:auto}
-  .eyebrow{
-    font-weight:600;font-size:12px;text-transform:uppercase;
-    letter-spacing:.14em;color:var(--mist);display:flex;gap:.6em;align-items:center;
-  }
-  .eyebrow .num{color:var(--pulse);font-family:var(--mono);font-size:11px}
-  h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.025em;
-    text-wrap:balance;margin:0;line-height:1.04}
-  section{padding:84px 0;border-top:1px solid var(--line)}
-  .sec-head{margin-bottom:44px;max-width:60ch}
-  .sec-head h2{font-size:clamp(28px,4.4vw,46px);margin:16px 0 14px}
-  .sec-head p{color:var(--mist);font-size:18px;margin:0;max-width:62ch}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:700;margin:0;line-height:1.08;
+    letter-spacing:-.01em;text-wrap:balance;color:var(--navy)}
+  section{padding:78px 0}
+  .sec-head{max-width:58ch;margin-bottom:40px}
+  .sec-head h2{font-size:clamp(27px,4.2vw,42px);margin:14px 0 12px}
+  .sec-head p{color:var(--grey);font-size:18px;margin:0;max-width:60ch}
 
-  /* ---------- HERO ---------- */
-  header{position:relative;padding:0;overflow:hidden;border:0}
-  .hero-glow{position:absolute;inset:0;background:
-    radial-gradient(60% 70% at 78% 18%,rgba(255,77,51,.22),transparent 60%),
-    radial-gradient(50% 60% at 12% 92%,rgba(21,206,182,.10),transparent 55%);
-    pointer-events:none}
-  .hero{position:relative;padding:118px 0 96px;display:flex;flex-direction:column;gap:30px}
-  .topbar{display:flex;justify-content:space-between;align-items:center;
-    padding:26px 0;font-size:13px;color:var(--mist)}
-  .wordmark{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.03em;color:#fff}
-  .wordmark .suf{color:var(--pulse)}
-  .hero h1{font-size:clamp(44px,8.6vw,104px);line-height:.96}
-  .hero h1 .em{color:var(--pulse)}
-  .hero .lede{font-size:clamp(18px,2.3vw,23px);color:var(--mist);max-width:54ch}
-  .hero .lede b{color:var(--paper);font-weight:600}
-  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-  .pill{font-family:var(--mono);font-size:12px;letter-spacing:.02em;
-    padding:7px 13px;border:1px solid var(--line);border-radius:999px;color:var(--mist)}
-  .pill.hot{border-color:rgba(255,77,51,.5);color:var(--pulse)}
+  /* pill eyebrow */
+  .eyebrow{display:inline-flex;align-items:center;gap:.5em;font-family:var(--display);
+    font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.1em;
+    padding:7px 14px;border-radius:999px;background:var(--sky);color:var(--blue)}
+  .eyebrow .num{font-variant-numeric:tabular-nums}
 
-  /* ---------- ESSENCE ---------- */
-  .thesis{font-family:var(--display);font-weight:800;letter-spacing:-.02em;
-    font-size:clamp(24px,3.6vw,38px);line-height:1.2;max-width:20ch}
-  .thesis .pulse{color:var(--pulse)}
-  .thesis .volt{color:var(--volt)}
-  .traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-    gap:1px;background:var(--line);border:1px solid var(--line);margin-top:46px;border-radius:14px;overflow:hidden}
-  .trait{background:var(--ink);padding:24px 22px}
-  .trait .n{font-family:var(--mono);font-size:12px;color:var(--pulse)}
-  .trait h4{font-family:var(--display);font-weight:800;font-size:18px;margin:12px 0 6px;letter-spacing:-.01em}
-  .trait p{margin:0;font-size:14px;color:var(--mist);line-height:1.5}
+  /* logo pill */
+  .logo{display:inline-flex;align-items:stretch;border:2.5px solid var(--black);
+    border-radius:999px;overflow:hidden;font-family:var(--display);font-weight:700;
+    line-height:1;font-size:22px;letter-spacing:-.01em}
+  .logo .l{background:var(--black);color:#fff;padding:.5em .55em .5em .8em}
+  .logo .r{background:#fff;color:var(--black);padding:.5em .8em .5em .5em}
+  .logo.lg{font-size:34px}
+  .logo.ondark{border-color:#fff}
+  .logo.ondark .l{background:transparent;color:#fff;padding-right:.5em}
+  .logo.ondark .r{background:transparent;color:#fff;padding-left:.5em}
 
-  /* ---------- COLOR ---------- */
-  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-  .sw{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--slate)}
-  .sw .chip{height:104px;display:flex;align-items:flex-end;padding:12px}
-  .sw .chip .tag{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.01em}
-  .sw .meta{padding:13px 14px 15px}
-  .sw .meta .hex{font-family:var(--mono);font-size:13px;color:var(--paper)}
-  .sw .meta .role{font-size:12.5px;color:var(--mist);margin-top:5px;line-height:1.45}
-  .sem-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-  .sem{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--mist);
-    border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 9px}
-  .dot{width:14px;height:14px;border-radius:50%}
-  .note{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
-  .note .card{flex:1 1 240px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--slate)}
-  .note .card.bad{border-color:rgba(229,72,77,.35)}
-  .note .card.good{border-color:rgba(31,185,121,.35)}
-  .note .card .lab{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-  .note .card.bad .lab{color:var(--critical)} .note .card.good .lab{color:var(--success)}
-  .note .card p{margin:8px 0 0;font-size:14px;color:var(--mist)}
+  /* HERO */
+  header{background:
+      radial-gradient(60% 90% at 88% -10%,var(--sky),transparent 60%),
+      radial-gradient(50% 80% at 0% 110%,var(--mint-tint),transparent 55%),
+      var(--white);
+    border-bottom:1px solid var(--line)}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:24px 0;
+    font-size:13px;color:var(--grey)}
+  .hero{padding:60px 0 88px;display:flex;flex-direction:column;gap:26px;align-items:flex-start}
+  .hero h1{font-size:clamp(40px,7.4vw,82px);line-height:1;letter-spacing:-.02em}
+  .hero h1 .blue{color:var(--blue)} .hero h1 .teal{color:var(--teal)}
+  .hero .lede{font-size:clamp(18px,2.2vw,22px);color:var(--grey);max-width:50ch;line-height:1.55}
+  .hero .lede b{color:var(--navy);font-weight:600}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+  .ptag{font-family:var(--display);font-weight:600;font-size:13px;padding:8px 15px;border-radius:999px;border:1.5px solid var(--line)}
+  .ptag.b{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .ptag.t{background:var(--mint-tint);color:var(--teal);border-color:var(--mint)}
+  .ptag.g{background:var(--gold-t);color:var(--gold-d);border-color:var(--gold)}
+  .ptag.c{background:var(--coral-t);color:var(--coral-d);border-color:var(--coral)}
 
-  /* ---------- TYPE ---------- */
-  .type-grid{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .trow{padding:26px 26px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;
-    gap:18px;align-items:baseline;justify-content:space-between}
+  /* tinted section variants */
+  .tint-sky{background:var(--sky)} .tint-mint{background:var(--mint-tint)}
+  .tint-gold{background:var(--gold-t)}
+
+  /* essence */
+  .thesis{font-family:var(--display);font-weight:700;font-size:clamp(23px,3.6vw,36px);
+    line-height:1.22;max-width:21ch;color:var(--navy);letter-spacing:-.01em}
+  .thesis .blue{color:var(--blue)} .thesis .teal{color:var(--teal)}
+  .traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px;margin-top:42px}
+  .trait{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:22px 20px}
+  .trait .n{font-family:var(--display);font-weight:700;font-size:13px;color:var(--blue)}
+  .trait h4{font-size:18px;margin:10px 0 6px}
+  .trait p{margin:0;font-size:14px;color:var(--grey);line-height:1.5}
+
+  /* color */
+  .swrap{display:flex;flex-direction:column;gap:26px}
+  .sgroup .glab{font-family:var(--display);font-weight:600;font-size:13px;text-transform:uppercase;
+    letter-spacing:.08em;color:var(--grey);margin-bottom:14px}
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:13px}
+  .sw{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+  .sw .chip{height:88px;display:flex;align-items:flex-end;padding:11px}
+  .sw .chip .tag{font-family:var(--display);font-weight:700;font-size:15px}
+  .sw .meta{padding:11px 13px 14px}
+  .sw .meta .hex{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.02em}
+  .sw .meta .role{font-size:12px;color:var(--grey);margin-top:4px;line-height:1.4}
+  .meaning{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+  .mc{flex:1 1 200px;border-radius:16px;padding:15px 17px;font-size:14px}
+  .mc b{font-family:var(--display);font-weight:700;display:block;margin-bottom:3px}
+  .mc.b{background:var(--sky);color:var(--navy)} .mc.t{background:var(--mint-tint);color:var(--teal)}
+  .mc.g{background:var(--gold-t);color:var(--gold-d)} .mc.c{background:var(--coral-t);color:var(--coral-d)}
+
+  /* type */
+  .type-card{background:#fff;border:1.5px solid var(--line);border-radius:22px;overflow:hidden}
+  .trow{padding:24px 26px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px;
+    align-items:baseline;justify-content:space-between}
   .trow:first-child{border-top:0}
-  .trow .spec{font-family:var(--mono);font-size:12px;color:var(--mist);min-width:160px}
-  .trow .spec b{color:var(--paper);display:block;font-family:var(--body);font-weight:600;font-size:13px;margin-bottom:3px}
-  .samp-display{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:clamp(30px,5vw,52px);line-height:1}
-  .samp-body{font-size:18px;color:var(--paper);max-width:42ch;line-height:1.6}
-  .samp-eyebrow{font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--mist)}
-  .samp-mono{font-family:var(--mono);font-size:18px;color:var(--volt);font-variant-numeric:tabular-nums}
-  .scale{display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-top:24px;color:var(--mist)}
-  .scale span{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--paper)}
+  .trow .spec{font-size:13px;color:var(--grey);min-width:180px}
+  .trow .spec b{font-family:var(--display);font-weight:600;color:var(--navy);display:block;margin-bottom:3px;font-size:14px}
+  .samp-display{font-family:var(--display);font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1;color:var(--navy)}
+  .samp-body{font-size:18px;max-width:42ch;line-height:1.6}
+  .samp-eye{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--blue)}
+  .samp-num{font-family:var(--display);font-weight:700;font-size:22px;color:var(--teal);font-variant-numeric:tabular-nums}
+  .scale{display:flex;flex-wrap:wrap;align-items:baseline;gap:16px;margin-top:22px}
+  .scale span{font-family:var(--display);font-weight:700;line-height:1;color:var(--navy)}
+  .scale .lab{font-family:var(--body);font-weight:400;font-size:12px;color:var(--grey);align-self:center}
 
-  /* ---------- LOGO ---------- */
-  .logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-  .logo-cell{border:1px solid var(--line);border-radius:14px;padding:34px 24px;display:flex;
-    flex-direction:column;gap:16px;align-items:flex-start;justify-content:center;min-height:150px}
-  .logo-cell.dark{background:var(--ink)}
-  .logo-cell.light{background:var(--paper)}
-  .logo-cell .lm{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.03em}
-  .logo-cell.dark .lm{color:#fff} .logo-cell.light .lm{color:var(--ink)}
-  .lm .suf{color:var(--pulse)}
-  .logo-cell .cap{font-size:12px;color:var(--mist);font-family:var(--mono)}
-  .logo-cell.light .cap{color:var(--mist-dim)}
-  .dont{margin-top:18px;font-size:14px;color:var(--mist)}
-  .dont b{color:var(--critical);font-weight:600}
+  /* logo section */
+  .logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .logo-cell{border-radius:20px;padding:40px 26px;display:flex;flex-direction:column;gap:18px;
+    align-items:center;justify-content:center;min-height:150px;border:1.5px solid var(--line)}
+  .logo-cell.dark{background:var(--black);border-color:var(--black)}
+  .logo-cell.navy{background:var(--navy);border-color:var(--navy)}
+  .logo-cell .cap{font-size:12px;color:var(--grey);font-family:var(--display);font-weight:500}
+  .logo-cell.dark .cap,.logo-cell.navy .cap{color:rgba(255,255,255,.7)}
+  .dont{margin-top:18px;font-size:14.5px;color:var(--grey)}
+  .dont b{color:var(--coral-d);font-weight:600}
 
-  /* ---------- VOICE ---------- */
-  .voice-pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:42px}
-  .vp{border:1px solid var(--line);border-radius:14px;padding:22px 20px;background:var(--slate)}
-  .vp h4{font-family:var(--display);font-weight:800;font-size:19px;margin:0 0 8px;letter-spacing:-.01em}
-  .vp h4 .x{color:var(--pulse)}
-  .vp p{margin:0;font-size:14px;color:var(--mist);line-height:1.55}
-  .slider{margin:14px 0;display:flex;align-items:center;gap:14px}
-  .slider .l,.slider .r{font-size:12px;color:var(--mist);width:120px;font-family:var(--mono)}
+  /* illustration */
+  .ill-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+  .ill-demo{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:26px;
+    display:flex;align-items:center;justify-content:center;min-height:240px}
+  .ill-demo svg{width:100%;max-width:340px;height:auto}
+  .ill-notes{display:flex;flex-direction:column;gap:10px}
+  .ill-notes .n{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:15px 18px;font-size:14.5px}
+  .ill-notes .n b{font-family:var(--display);font-weight:600;color:var(--navy)}
+
+  /* voice */
+  .vp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:40px}
+  .vp{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:22px 20px}
+  .vp h4{font-size:18px;margin:0 0 7px}
+  .vp h4 .x{color:var(--blue)}
+  .vp p{margin:0;font-size:14px;color:var(--grey);line-height:1.55}
+  .slider{margin:13px 0;display:flex;align-items:center;gap:14px}
+  .slider .l,.slider .r{font-family:var(--display);font-weight:600;font-size:12px;color:var(--grey);width:110px}
   .slider .r{text-align:right}
-  .track{flex:1;height:3px;background:var(--line);border-radius:3px;position:relative}
-  .track i{position:absolute;top:50%;width:13px;height:13px;border-radius:50%;background:var(--pulse);
-    transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(255,77,51,.18)}
+  .track{flex:1;height:4px;background:var(--line);border-radius:4px;position:relative}
+  .track i{position:absolute;top:50%;width:15px;height:15px;border-radius:50%;background:var(--blue);
+    transform:translate(-50%,-50%);box-shadow:0 0 0 5px rgba(67,138,232,.16)}
+  .tbl-wrap{overflow-x:auto;background:#fff;border:1.5px solid var(--line);border-radius:20px}
+  .tone-table{width:100%;border-collapse:collapse;font-size:14px}
+  .tone-table th,.tone-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  .tone-table tr:last-child td{border-bottom:0}
+  .tone-table th{font-family:var(--display);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--grey);font-weight:600}
+  .tone-table td:first-child{font-family:var(--display);font-weight:600;color:var(--navy);white-space:nowrap}
+  .tone-table .ex{color:var(--grey);font-style:italic}
 
-  .tone-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
-  .tone-table th,.tone-table td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-  .tone-table th{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--mist);font-weight:600}
-  .tone-table td:first-child{font-weight:600;color:var(--paper);white-space:nowrap}
-  .tone-table .ex{color:var(--mist);font-style:italic}
-  .tbl-wrap{overflow-x:auto}
-
-  /* ---------- WORDS ---------- */
+  /* words */
   .words{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .wcol{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--slate)}
-  .wcol .h{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;
-    letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
-  .wcol.use .h{color:var(--success)} .wcol.avoid .h{color:var(--critical)}
+  .wcol{border-radius:20px;padding:24px}
+  .wcol.use{background:var(--mint-tint)} .wcol.avoid{background:var(--coral-t)}
+  .wcol .h{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.04em;
+    text-transform:uppercase;margin-bottom:15px;display:flex;align-items:center;gap:8px}
+  .wcol.use .h{color:var(--green-d)} .wcol.avoid .h{color:var(--coral-d)}
   .tags{display:flex;flex-wrap:wrap;gap:8px}
-  .tag-w{font-size:13px;padding:6px 11px;border-radius:8px;border:1px solid var(--line);color:var(--paper)}
-  .wcol.avoid .tag-w{color:var(--mist);text-decoration:line-through;text-decoration-color:rgba(229,72,77,.6)}
-
+  .tag-w{font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;background:#fff}
+  .wcol.use .tag-w{color:var(--green-d)}
+  .wcol.avoid .tag-w{color:var(--grey);text-decoration:line-through;text-decoration-color:var(--coral)}
   .rewrites{margin-top:22px;display:flex;flex-direction:column;gap:12px}
-  .rw{border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  .rw .bad,.rw .good{padding:14px 18px;font-size:15px;line-height:1.5;display:flex;gap:12px;align-items:flex-start}
-  .rw .bad{background:rgba(229,72,77,.07);color:var(--mist)}
-  .rw .good{background:rgba(31,185,121,.07);color:var(--paper);border-top:1px solid var(--line)}
-  .rw .mk{font-family:var(--mono);font-weight:700;flex-shrink:0}
-  .rw .bad .mk{color:var(--critical)} .rw .good .mk{color:var(--success)}
+  .rw{border-radius:16px;overflow:hidden;border:1.5px solid var(--line)}
+  .rw .bad,.rw .good{padding:14px 18px;font-size:15px;line-height:1.5;display:flex;gap:11px;align-items:flex-start}
+  .rw .bad{background:var(--coral-t);color:var(--grey)}
+  .rw .good{background:var(--mint-tint);color:var(--navy);font-weight:500}
+  .rw .mk{font-family:var(--display);font-weight:700;flex-shrink:0}
+  .rw .bad .mk{color:var(--coral-d)} .rw .good .mk{color:var(--green-d)}
 
-  /* ---------- MESSAGING ---------- */
-  .msg-hier{display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
-  .mrow{display:flex;gap:18px;align-items:baseline;border:1px solid var(--line);border-radius:12px;padding:16px 20px;background:var(--slate)}
-  .mrow .k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--pulse);width:130px;flex-shrink:0}
-  .mrow .v{font-family:var(--display);font-weight:800;font-size:clamp(17px,2.2vw,22px);letter-spacing:-.015em}
+  /* messaging */
+  .msg-hier{display:flex;flex-direction:column;gap:10px;margin-bottom:38px}
+  .mrow{display:flex;gap:18px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:15px 20px}
+  .mrow .k{font-family:var(--display);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);width:120px;flex-shrink:0}
+  .mrow .v{font-family:var(--display);font-weight:700;font-size:clamp(16px,2.1vw,21px);color:var(--navy);letter-spacing:-.01em}
   .taglines{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
-  .tl{border:1px solid var(--line);border-left:3px solid var(--pulse);border-radius:0 12px 12px 0;
-    padding:18px 20px;font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-.01em;background:var(--slate)}
-  .tl.primary{background:linear-gradient(120deg,rgba(255,77,51,.14),transparent);font-size:21px}
+  .tl{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:18px 20px;
+    font-family:var(--display);font-weight:700;font-size:18px;color:var(--navy);letter-spacing:-.01em}
+  .tl.primary{background:var(--blue);color:#fff;border-color:var(--blue);font-size:21px}
 
-  /* ---------- CHECKLIST ---------- */
-  .check{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px 26px}
-  .ci{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--paper)}
-  .ci .box{width:18px;height:18px;border:1.5px solid var(--volt);border-radius:5px;flex-shrink:0;margin-top:2px;position:relative}
-  .ci .box::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:9px;
-    border:solid var(--volt);border-width:0 2px 2px 0;transform:rotate(45deg)}
+  /* checklist */
+  .check{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:11px 26px}
+  .ci{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+  .ci .box{width:20px;height:20px;border-radius:7px;background:var(--green-d);flex-shrink:0;margin-top:1px;position:relative}
+  .ci .box::after{content:"";position:absolute;left:7px;top:3px;width:5px;height:9px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
 
-  footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mist);font-size:13px;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
-  footer .wordmark{font-size:17px}
+  footer{background:var(--navy);color:rgba(255,255,255,.75);padding:46px 0;font-size:13px}
+  footer .rail{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 
   @media (max-width:680px){
-    section{padding:60px 0}
-    .words{grid-template-columns:1fr}
-    .mrow{flex-direction:column;gap:6px}
+    section{padding:54px 0}
+    .words,.ill-grid{grid-template-columns:1fr}
+    .mrow{flex-direction:column;align-items:flex-start;gap:5px}
     .mrow .k{width:auto}
-    .slider .l,.slider .r{width:84px}
+    .slider .l,.slider .r{width:82px}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
 <header>
-  <div class="hero-glow"></div>
   <div class="rail">
     <div class="topbar">
-      <span class="wordmark">FOMO<span class="suf">.ai</span></span>
-      <span>Brand Design System &amp; Voice · v1</span>
+      <span class="logo"><span class="l">FOMO</span><span class="r">.ai</span></span>
+      <span>Brand Design System &amp; Voice · v2</span>
     </div>
     <div class="hero">
       <span class="eyebrow"><span class="num">◆</span> The new growth playbook</span>
-      <h1>AI broke the old playbook.<br><span class="em">We wrote the new one.</span></h1>
-      <p class="lede">FOMO.ai grows <b>sales &amp; leads without paid ads</b> — blending advanced AI with seasoned human experts to win <b>AI Search</b>: SEO, AEO, GEO, and LLMEO.</p>
+      <h1>AI broke the old playbook.<br><span class="blue">We make the new one</span> <span class="teal">easy.</span></h1>
+      <p class="lede">FOMO.ai grows <b>sales &amp; leads without paid ads</b> — blending advanced AI with seasoned human experts to win <b>AI Search</b>: SEO, AEO, GEO &amp; LLMEO.</p>
       <div class="pill-row">
-        <span class="pill hot">Sales &amp; leads without paid ads</span>
-        <span class="pill">AI + Humans</span>
-        <span class="pill">SEO · AEO · GEO · LLMEO</span>
-        <span class="pill">Early-mover advantage</span>
+        <span class="ptag b">Sales &amp; leads without paid ads</span>
+        <span class="ptag t">AI + Humans</span>
+        <span class="ptag g">Premium, affordable</span>
+        <span class="ptag c">Early-mover advantage</span>
       </div>
     </div>
   </div>
@@ -206,41 +219,61 @@
 <section id="essence">
   <div class="rail">
     <span class="eyebrow"><span class="num">01</span> Brand essence</span>
-    <p class="thesis" style="margin-top:18px">FOMO is reframed, not feared — anxiety about being left behind becomes a concrete <span class="pulse">early-mover advantage</span>, won with <span class="volt">AI&nbsp;+&nbsp;Humans</span>.</p>
+    <p class="thesis" style="margin-top:18px">FOMO is reframed, not feared — anxiety about being left behind becomes a concrete <span class="blue">early-mover advantage</span>, won with <span class="teal">AI + Humans</span> and made easy.</p>
     <div class="traits">
-      <div class="trait"><span class="n">01</span><h4>Confident</h4><p>We know this terrain and state things plainly.</p></div>
-      <div class="trait"><span class="n">02</span><h4>Contrarian</h4><p>We'll tell you the old way is breaking — constructively.</p></div>
+      <div class="trait"><span class="n">01</span><h4>Confident</h4><p>We know this terrain and say so plainly.</p></div>
+      <div class="trait"><span class="n">02</span><h4>Contrarian</h4><p>We'll tell you the old way is breaking — kindly.</p></div>
       <div class="trait"><span class="n">03</span><h4>Pragmatic</h4><p>Every insight comes with the next move.</p></div>
-      <div class="trait"><span class="n">04</span><h4>Approachable</h4><p>Expert without jargon-gatekeeping.</p></div>
-      <div class="trait"><span class="n">05</span><h4>Energizing</h4><p>Momentum and optimism — never doom.</p></div>
+      <div class="trait"><span class="n">04</span><h4>Human</h4><p>Warm, playful, jargon-free. AI <em>and</em> people.</p></div>
+      <div class="trait"><span class="n">05</span><h4>Energizing</h4><p>Optimism and momentum — never doom.</p></div>
     </div>
   </div>
 </section>
 
-<section id="color">
+<section id="color" class="tint-sky">
   <div class="rail">
     <div class="sec-head">
       <span class="eyebrow"><span class="num">02</span> Color</span>
-      <h2>One bold accent. Everything else, calm.</h2>
-      <p>Ink grounds read premium. <b style="color:var(--pulse)">Pulse</b> is the single star — urgency, momentum, the FOMO energy. <b style="color:var(--volt)">Volt</b> is its restrained, AI-search counterpoint.</p>
+      <h2>Blue + green at the core. Gold &amp; coral for spark.</h2>
+      <p>Bright, optimistic, human — built on white. <b style="color:var(--blue)">Blue</b> leads (trust + action), <b style="color:var(--teal)">teal/green</b> signals growth, <b style="color:var(--gold-d)">gold</b> means premium value, <b style="color:var(--coral-d)">coral</b> brings urgency.</p>
     </div>
-    <div class="swatches">
-      <div class="sw"><div class="chip" style="background:#0C0F17"><span class="tag" style="color:#fff">Ink</span></div><div class="meta"><div class="hex">#0C0F17</div><div class="role">Primary dark ground</div></div></div>
-      <div class="sw"><div class="chip" style="background:#1B2230"><span class="tag" style="color:#fff">Slate</span></div><div class="meta"><div class="hex">#1B2230</div><div class="role">Elevated surfaces, cards</div></div></div>
-      <div class="sw"><div class="chip" style="background:#FF4D33"><span class="tag" style="color:#1a0600">Pulse</span></div><div class="meta"><div class="hex">#FF4D33</div><div class="role">THE accent · CTAs, highlights</div></div></div>
-      <div class="sw"><div class="chip" style="background:#15CEB6"><span class="tag" style="color:#04261f">Volt</span></div><div class="meta"><div class="hex">#15CEB6</div><div class="role">Secondary · AI-search, data</div></div></div>
-      <div class="sw"><div class="chip" style="background:#F5F6F8"><span class="tag" style="color:#0C0F17">Paper</span></div><div class="meta"><div class="hex">#F5F6F8</div><div class="role">Light ground (never pure white)</div></div></div>
-      <div class="sw"><div class="chip" style="background:#9AA4B2"><span class="tag" style="color:#0C0F17">Mist</span></div><div class="meta"><div class="hex">#9AA4B2</div><div class="role">Muted text, borders</div></div></div>
+    <div class="swrap">
+      <div class="sgroup">
+        <div class="glab">Primary · Blue &amp; Teal</div>
+        <div class="swatches">
+          <div class="sw"><div class="chip" style="background:#174D80"><span class="tag" style="color:#fff">Navy</span></div><div class="meta"><div class="hex">#174D80</div><div class="role">Headlines, depth, trust</div></div></div>
+          <div class="sw"><div class="chip" style="background:#438AE8"><span class="tag" style="color:#fff">Blue</span></div><div class="meta"><div class="hex">#438AE8</div><div class="role">Primary action · CTAs, links</div></div></div>
+          <div class="sw"><div class="chip" style="background:#E9F2FE"><span class="tag" style="color:#174D80">Sky</span></div><div class="meta"><div class="hex">#E9F2FE</div><div class="role">Soft blue surface</div></div></div>
+          <div class="sw"><div class="chip" style="background:#19866A"><span class="tag" style="color:#fff">Teal</span></div><div class="meta"><div class="hex">#19866A</div><div class="role">Growth, results signal</div></div></div>
+          <div class="sw"><div class="chip" style="background:#93DBC8"><span class="tag" style="color:#0E1116">Mint</span></div><div class="meta"><div class="hex">#93DBC8</div><div class="role">Fresh accent, fills</div></div></div>
+          <div class="sw"><div class="chip" style="background:#DDF8F1"><span class="tag" style="color:#19866A">Mint Tint</span></div><div class="meta"><div class="hex">#DDF8F1</div><div class="role">Soft teal surface</div></div></div>
+        </div>
+      </div>
+      <div class="sgroup">
+        <div class="glab">Secondary · Green / Gold / Coral</div>
+        <div class="swatches">
+          <div class="sw"><div class="chip" style="background:#0C8253"><span class="tag" style="color:#fff">Green</span></div><div class="meta"><div class="hex">#0C8253</div><div class="role">Success, positive metrics</div></div></div>
+          <div class="sw"><div class="chip" style="background:#63C383"><span class="tag" style="color:#0E1116">Green Mid</span></div><div class="meta"><div class="hex">#63C383</div><div class="role">Growth storytelling</div></div></div>
+          <div class="sw"><div class="chip" style="background:#EBAA03"><span class="tag" style="color:#0E1116">Gold</span></div><div class="meta"><div class="hex">#EBAA03</div><div class="role">Premium value, highlight</div></div></div>
+          <div class="sw"><div class="chip" style="background:#FFE999"><span class="tag" style="color:#7a5800">Gold Light</span></div><div class="meta"><div class="hex">#FFE999</div><div class="role">Optimism, accent</div></div></div>
+          <div class="sw"><div class="chip" style="background:#EB6553"><span class="tag" style="color:#fff">Coral</span></div><div class="meta"><div class="hex">#EB6553</div><div class="role">Urgency, the FOMO spark</div></div></div>
+          <div class="sw"><div class="chip" style="background:#CA390B"><span class="tag" style="color:#fff">Rust</span></div><div class="meta"><div class="hex">#CA390B</div><div class="role">Bold warm accent</div></div></div>
+        </div>
+      </div>
+      <div class="sgroup">
+        <div class="glab">Neutrals · from logo &amp; illustrations</div>
+        <div class="swatches">
+          <div class="sw"><div class="chip" style="background:#0E1116"><span class="tag" style="color:#fff">Black</span></div><div class="meta"><div class="hex">#0E1116</div><div class="role">Logo, line art, text</div></div></div>
+          <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid var(--line)"><span class="tag" style="color:#0E1116">White</span></div><div class="meta"><div class="hex">#FFFFFF</div><div class="role">Primary ground</div></div></div>
+          <div class="sw"><div class="chip" style="background:#5B6B7B"><span class="tag" style="color:#fff">Slate Grey</span></div><div class="meta"><div class="hex">#5B6B7B</div><div class="role">Muted text, hairlines</div></div></div>
+        </div>
+      </div>
     </div>
-    <div class="sem-row">
-      <span class="sem"><span class="dot" style="background:var(--success)"></span>Success #1FB979</span>
-      <span class="sem"><span class="dot" style="background:var(--warning)"></span>Warning #F5B72E</span>
-      <span class="sem"><span class="dot" style="background:var(--critical)"></span>Critical #E5484D</span>
-      <span class="sem" style="border-style:dashed">Semantic only — not brand accents</span>
-    </div>
-    <div class="note">
-      <div class="card bad"><span class="lab">Never</span><p>Purple→blue tech gradients · glowing brains · acid-green-on-black · everything centered &amp; rounded.</p></div>
-      <div class="card good"><span class="lab">Instead</span><p>Ink grounds, one Pulse accent, real product/results imagery, heavy confident headlines, calm space.</p></div>
+    <div class="meaning">
+      <div class="mc b"><b>Blue</b>Action &amp; trust</div>
+      <div class="mc t"><b>Green / Teal</b>Growth &amp; results</div>
+      <div class="mc g"><b>Gold</b>Value &amp; premium</div>
+      <div class="mc c"><b>Coral</b>Urgency &amp; attention</div>
     </div>
   </div>
 </section>
@@ -249,77 +282,109 @@
   <div class="rail">
     <div class="sec-head">
       <span class="eyebrow"><span class="num">03</span> Typography</span>
-      <h2>Personality from weight &amp; scale — not gimmick fonts.</h2>
-      <p>Heavy, tightly-tracked grotesque headlines against calm humanist body. The contrast <em>is</em> the identity. Data sets in mono with tabular figures — we sell measurable growth.</p>
+      <h2>Rounded, geometric, friendly — like the logo.</h2>
+      <p>Headlines in a geometric rounded sans (<b>Poppins</b>), body in a clean readable sans (<b>Inter</b>). Circular forms and soft terminals echo the wordmark. Numbers use tabular figures — we sell measurable growth.</p>
     </div>
-    <div class="type-grid">
-      <div class="trow">
-        <div class="spec"><b>Display / Headline</b>Helvetica Neue · 800 · −0.03em</div>
-        <div class="samp-display">Move first.</div>
-      </div>
-      <div class="trow">
-        <div class="spec"><b>Body</b>system-ui · 400–500 · 1.6</div>
-        <div class="samp-body">Search changed. AI answers questions now — and you can be the answer. We make that easy and affordable.</div>
-      </div>
-      <div class="trow">
-        <div class="spec"><b>Eyebrow / Label</b>600 · UPPER · 0.14em</div>
-        <div class="samp-eyebrow">The new growth playbook</div>
-      </div>
-      <div class="trow">
-        <div class="spec"><b>Data / Tokens</b>mono · tabular-nums</div>
-        <div class="samp-mono">+312% leads · $2,400/mo · 0 paid ads</div>
-      </div>
+    <div class="type-card">
+      <div class="trow"><div class="spec"><b>Display / Headline</b>Poppins · 700</div><div class="samp-display">Move first.</div></div>
+      <div class="trow"><div class="spec"><b>Body</b>Inter · 400–500 · 1.6</div><div class="samp-body">Search changed. AI answers questions now — and you can be the answer. We make that easy and affordable.</div></div>
+      <div class="trow"><div class="spec"><b>Eyebrow / Label</b>Poppins · 600 · UPPER</div><div class="samp-eye">The new growth playbook</div></div>
+      <div class="trow"><div class="spec"><b>Data / Numbers</b>tabular-nums</div><div class="samp-num">+312% leads · $2,400/mo · 0 paid ads</div></div>
     </div>
     <div class="scale">
       <span style="font-size:13px">13</span><span style="font-size:16px">16</span><span style="font-size:20px">20</span>
       <span style="font-size:25px">25</span><span style="font-size:31px">31</span><span style="font-size:39px">39</span>
       <span style="font-size:49px">49</span><span style="font-size:61px">61</span>
-      <span style="font-family:var(--mono);font-size:12px;color:var(--mist);align-self:center">1.25 ratio scale</span>
+      <span class="lab">1.25 ratio scale</span>
     </div>
   </div>
 </section>
 
-<section id="logo">
+<section id="logo" class="tint-mint">
   <div class="rail">
     <div class="sec-head">
-      <span class="eyebrow"><span class="num">04</span> Wordmark</span>
-      <h2>Always FOMO<span style="color:var(--pulse)">.ai</span> — caps, lowercase suffix.</h2>
-      <p>Set <b>FOMO</b> in heavy display; mark <b>.ai</b> in Pulse. Keep the cap-height of "F" as clear space on every side.</p>
+      <span class="eyebrow"><span class="num">04</span> Logo</span>
+      <h2>The split-capsule wordmark.</h2>
+      <p>FOMO<b>.ai</b> inside a rounded stadium pill — the signature shape. Echo the capsule in buttons and tags; never distort the mark itself.</p>
     </div>
     <div class="logo-grid">
-      <div class="logo-cell dark"><span class="lm">FOMO<span class="suf">.ai</span></span><span class="cap">On dark · white + Pulse suffix (preferred)</span></div>
-      <div class="logo-cell light"><span class="lm">FOMO<span class="suf">.ai</span></span><span class="cap">On light · Ink + Pulse suffix</span></div>
-      <div class="logo-cell dark" style="align-items:center;justify-content:center;text-align:center"><span class="lm" style="font-size:40px">F</span><span class="cap">Icon / app mark · "F" in display</span></div>
+      <div class="logo-cell" style="background:#fff">
+        <span class="logo lg"><span class="l">FOMO</span><span class="r">.ai</span></span>
+        <span class="cap">On white · split capsule (primary)</span>
+      </div>
+      <div class="logo-cell dark">
+        <span class="logo lg ondark"><span class="l">FOMO</span><span class="r">.ai</span></span>
+        <span class="cap">On black · outline + white</span>
+      </div>
+      <div class="logo-cell navy">
+        <span class="logo lg ondark"><span class="l">FOMO</span><span class="r">.ai</span></span>
+        <span class="cap">Brand-color fill · mono wordmark</span>
+      </div>
     </div>
-    <p class="dont"><b>Don't:</b> stretch · recolor the whole mark to Pulse · add shadows/outlines · write "Fomo," "FOMO AI," or "Fomo.ai" · place on busy imagery without a scrim.</p>
+    <p class="dont"><b>Don't:</b> stretch or rotate · add shadows/gradients · recolor individual letters · remove the pill · write "Fomo," "FOMO AI," or "Fomo.ai" — it's always <b style="color:var(--navy)">FOMO.ai</b>.</p>
   </div>
 </section>
 
-<section id="voice">
+<section id="illustration">
   <div class="rail">
     <div class="sec-head">
-      <span class="eyebrow"><span class="num">05</span> Voice &amp; tone</span>
-      <h2>A sharp, generous expert who wants you to win.</h2>
-      <p>The <b>voice</b> is constant — these four pillars. The <b>tone</b> dial flexes by context: bold on a billboard, gentle in an error message.</p>
+      <span class="eyebrow"><span class="num">05</span> Illustration</span>
+      <h2>Hand-drawn doodles of people + AI.</h2>
+      <p>FOMO's most distinctive asset: loose <b>black-and-white monoline illustrations</b> — playful, human scenes of people working alongside friendly doodle robots. Color comes from the palette <em>around</em> the art, not inside it.</p>
     </div>
-    <div class="voice-pillars">
+    <div class="ill-grid">
+      <div class="ill-demo">
+        <!-- demonstrative monoline sketch in the brand's hand-drawn style -->
+        <svg viewBox="0 0 340 220" fill="none" stroke="#0E1116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Hand-drawn doodle of a person and a friendly robot chatting">
+          <!-- person -->
+          <circle cx="78" cy="70" r="26" fill="#fff"/>
+          <path d="M52 150c0-30 12-48 26-48s26 18 26 48"/>
+          <path d="M60 120l-18 22M96 120l18 22"/>
+          <!-- robot -->
+          <rect x="206" y="70" width="92" height="70" rx="22" fill="#0E1116"/>
+          <circle cx="234" cy="105" r="9" fill="#fff" stroke="none"/>
+          <circle cx="270" cy="105" r="9" fill="#fff" stroke="none"/>
+          <path d="M252 52v-14" stroke-width="4"/><circle cx="252" cy="33" r="6" fill="#0E1116"/>
+          <path d="M206 118h-14M298 118h14"/>
+          <path d="M224 156c0 24 14 40 28 40s28-16 28-40" />
+          <!-- speech bubble -->
+          <path d="M120 36h78a14 14 0 0 1 14 14v22a14 14 0 0 1-14 14h-40l-18 18v-18h-20a14 14 0 0 1-14-14V50a14 14 0 0 1 14-14Z" fill="#438AE8" stroke="none"/>
+          <path d="M138 56h44M138 70h30" stroke="#fff" stroke-width="4"/>
+        </svg>
+      </div>
+      <div class="ill-notes">
+        <div class="n"><b>Style:</b> loose hand-drawn line, bold black fills, white space. Quirky &amp; warm.</div>
+        <div class="n"><b>Robots welcome</b> — but only as charming doodles, never glossy 3D AI stock.</div>
+        <div class="n"><b>Color sits around the art:</b> brand-tint backgrounds, pills, type. Optionally spot-color one element.</div>
+        <div class="n"><b>Always rounded:</b> pills, circles, soft corners — echoing the logo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voice" class="tint-gold">
+  <div class="rail">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="num">06</span> Voice &amp; tone</span>
+      <h2>A sharp, generous expert who wants you to win.</h2>
+      <p>The <b>voice</b> is constant — these four pillars. The <b>tone</b> dial flexes: bold on a billboard, gentle in an error message.</p>
+    </div>
+    <div class="vp-grid">
       <div class="vp"><h4>Clear <span class="x">over clever</span></h4><p>Short sentences, plain words. If a smart 12th-grader can't follow it, rewrite it.</p></div>
       <div class="vp"><h4>Confident, <span class="x">not arrogant</span></h4><p>Definitive statements, backed. No hedging, no boasting.</p></div>
       <div class="vp"><h4>Urgent, <span class="x">never anxious</span></h4><p>Name the stakes, then hand over the move. Pressure that empowers.</p></div>
       <div class="vp"><h4>Proof <span class="x">over promises</span></h4><p>Specifics, mechanisms, numbers — beat adjectives every time.</p></div>
     </div>
-
-    <span class="eyebrow" style="margin-bottom:18px;display:flex">Tone dial</span>
-    <div class="slider"><span class="l">Calm</span><div class="track"><i style="left:78%"></i></div><span class="r">Bold</span></div>
-    <div class="slider"><span class="l">Playful</span><div class="track"><i style="left:62%"></i></div><span class="r">Serious</span></div>
-    <div class="slider"><span class="l">Plain</span><div class="track"><i style="left:30%"></i></div><span class="r">Technical</span></div>
-    <p style="color:var(--mist);font-size:14px;margin-top:8px">Default resting position. Push <b style="color:var(--paper)">Bold</b> for ads/home, ease toward <b style="color:var(--paper)">Calm + Plain</b> for product, errors, and onboarding.</p>
-
-    <div class="tbl-wrap" style="margin-top:36px">
+    <span class="eyebrow" style="background:#fff;color:var(--gold-d);margin-bottom:18px">Tone dial · resting position</span>
+    <div class="slider"><span class="l">Calm</span><div class="track"><i style="left:72%"></i></div><span class="r">Bold</span></div>
+    <div class="slider"><span class="l">Playful</span><div class="track"><i style="left:58%"></i></div><span class="r">Serious</span></div>
+    <div class="slider"><span class="l">Plain</span><div class="track"><i style="left:28%"></i></div><span class="r">Technical</span></div>
+    <p style="color:var(--grey);font-size:14px;margin:8px 0 30px">Push toward <b style="color:var(--navy)">Bold</b> for ads/home; ease to <b style="color:var(--navy)">Calm + Plain</b> for product, errors, onboarding.</p>
+    <div class="tbl-wrap">
       <table class="tone-table">
         <thead><tr><th>Context</th><th>Dial toward</th><th>Sounds like</th></tr></thead>
         <tbody>
-          <tr><td>Homepage / ads</td><td>Bold, punchy, momentum</td><td class="ex">"AI broke the old playbook. Here's the new one."</td></tr>
+          <tr><td>Homepage / ads</td><td>Bold, punchy</td><td class="ex">"AI broke the old playbook. Here's the new one."</td></tr>
           <tr><td>Blog / educational</td><td>Patient, teacherly</td><td class="ex">"AEO means optimizing to be the answer, not just to rank."</td></tr>
           <tr><td>Sales / proposals</td><td>Reassuring, specific</td><td class="ex">"Here's exactly what the first 90 days look like."</td></tr>
           <tr><td>Onboarding / product</td><td>Friendly, brief</td><td class="ex">"You're set. First report lands Friday."</td></tr>
@@ -333,19 +398,19 @@
 <section id="words">
   <div class="rail">
     <div class="sec-head">
-      <span class="eyebrow"><span class="num">06</span> Language</span>
+      <span class="eyebrow"><span class="num">07</span> Language</span>
       <h2>The words that sound like us — and the ones that don't.</h2>
     </div>
     <div class="words">
       <div class="wcol use">
-        <div class="h">◆ Words we use</div>
+        <div class="h">✓ Words we use</div>
         <div class="tags">
           <span class="tag-w">early-mover advantage</span><span class="tag-w">new growth playbook</span>
           <span class="tag-w">AI Search</span><span class="tag-w">be the answer</span>
           <span class="tag-w">without paid ads</span><span class="tag-w">AI + Humans</span>
           <span class="tag-w">get found</span><span class="tag-w">move first</span>
           <span class="tag-w">compounding</span><span class="tag-w">seasoned experts</span>
-          <span class="tag-w">affordable</span><span class="tag-w">momentum</span>
+          <span class="tag-w">easy &amp; affordable</span><span class="tag-w">momentum</span>
         </div>
       </div>
       <div class="wcol avoid">
@@ -355,7 +420,7 @@
           <span class="tag-w">cutting-edge</span><span class="tag-w">synergy</span>
           <span class="tag-w">supercharge</span><span class="tag-w">harness the power of AI</span>
           <span class="tag-w">holistic</span><span class="tag-w">best-in-class</span>
-          <span class="tag-w">results-driven</span><span class="tag-w">in today's fast-paced world</span>
+          <span class="tag-w">results-driven</span><span class="tag-w">fast-paced world</span>
           <span class="tag-w">10x</span><span class="tag-w">ninja / guru</span>
         </div>
       </div>
@@ -377,10 +442,10 @@
   </div>
 </section>
 
-<section id="messaging">
+<section id="messaging" class="tint-sky">
   <div class="rail">
     <div class="sec-head">
-      <span class="eyebrow"><span class="num">07</span> Messaging</span>
+      <span class="eyebrow"><span class="num">08</span> Messaging</span>
       <h2>One promise, laddered down to the why.</h2>
     </div>
     <div class="msg-hier">
@@ -390,7 +455,7 @@
       <div class="mrow"><span class="k">Why now</span><span class="v">Early-mover advantage. The playbook is changing.</span></div>
       <div class="mrow"><span class="k">Why us</span><span class="v">Premium results, a fraction of the cost.</span></div>
     </div>
-    <span class="eyebrow" style="margin-bottom:16px;display:flex">Taglines &amp; lines</span>
+    <span class="eyebrow" style="margin-bottom:16px">Taglines &amp; lines</span>
     <div class="taglines">
       <div class="tl primary">Sales &amp; leads without paid ads.</div>
       <div class="tl">Grow your marketing with AI and Humans.</div>
@@ -405,25 +470,25 @@
 <section id="checklist">
   <div class="rail">
     <div class="sec-head">
-      <span class="eyebrow"><span class="num">08</span> Pre-flight</span>
+      <span class="eyebrow"><span class="num">09</span> Pre-flight</span>
       <h2>Run this before anything ships.</h2>
     </div>
     <div class="check">
-      <div class="ci"><span class="box"></span>Brand name written <b style="font-weight:600">FOMO.ai</b> exactly</div>
+      <div class="ci"><span class="box"></span>Brand name written <b>FOMO.ai</b> exactly</div>
       <div class="ci"><span class="box"></span>Leads with the reader's outcome, not our mechanics</div>
       <div class="ci"><span class="box"></span>A clear next move — no fear without a path</div>
       <div class="ci"><span class="box"></span>Plain words, short sentences, active voice</div>
       <div class="ci"><span class="box"></span>Claims backed by specifics or proof</div>
-      <div class="ci"><span class="box"></span>One bold accent (Pulse); calm everywhere else</div>
-      <div class="ci"><span class="box"></span>No banned words or AI-generated visual clichés</div>
-      <div class="ci"><span class="box"></span>Tone dial matched to the context</div>
+      <div class="ci"><span class="box"></span>Bright on white; color follows the meaning system</div>
+      <div class="ci"><span class="box"></span>Rounded, friendly type &amp; shapes; pill motif intact</div>
+      <div class="ci"><span class="box"></span>Illustrations are hand-drawn B&amp;W, not 3D AI stock</div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="rail" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;width:var(--rail)">
-    <span class="wordmark">FOMO<span class="suf">.ai</span></span>
-    <span>Brand source of truth · pair with <span style="font-family:var(--mono);color:var(--paper)">BRAND.md</span> for AI tooling · v1 · 2026</span>
+  <div class="rail">
+    <span class="logo ondark" style="border-color:rgba(255,255,255,.6)"><span class="l">FOMO</span><span class="r">.ai</span></span>
+    <span>Brand source of truth · pair with <b style="color:#fff">BRAND.md</b> for AI tooling · v2 · 2026</span>
   </div>
 </footer>
