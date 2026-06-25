@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #eef3f9; }
+  * { box-sizing: border-box; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #fff; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.6in !important; box-shadow: none !important; }
+    .hdr-space, .ftr-space { display: table-cell !important; height: 0.6in; }
+    h1, h2, h3, h4 { break-after: avoid; }
+    .keep, figure, blockquote, tr, .concept { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .screen-only { display: none !important; }
+    .cover { break-after: page; }
+    .sectionbreak { break-before: page; }
+  }
+</style>
+</helmet>
+<main class="doc" style="font-family:'IBM Plex Sans',sans-serif; color:#1f3a52; max-width:8.5in; margin:0 auto; background:#fff; padding:0 0 0.6in; box-shadow:0 1px 40px rgba(23,77,128,.10); line-height:1.6;">
+<table class="doc-frame" role="presentation" style="width:100%; border-collapse:collapse;">
+<thead><tr><td class="hdr-space" style="display:none;"></td></tr></thead>
+<tbody><tr><td style="padding:0;">
+
+<!-- ===== COVER ===== -->
+<section class="cover keep" style="background:#174d80; color:#fff; padding:64px clamp(28px,5vw,68px) 56px; margin-bottom:0; position:relative; overflow:hidden;">
+  <div style="position:absolute; right:-120px; top:-120px; width:380px; height:380px; border-radius:50%; background:#1f5e96; opacity:.55;"></div>
+  <div style="position:absolute; right:90px; bottom:-160px; width:260px; height:260px; border-radius:50%; background:#19866a; opacity:.30;"></div>
+  <div style="position:relative; z-index:1;">
+    <img src="assets/fomo-light.png" alt="FOMO.ai" style="height:42px; width:auto; display:block; margin-bottom:38px;">
+    <div style="font-family:'Space Grotesk',sans-serif; font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#93dbc8; font-weight:600; margin-bottom:18px;">Paid Social · Creative Asset Brief</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:54px; line-height:1.02; margin:0 0 20px; letter-spacing:-.02em; color:#fff;">Meta Ads<br>Lead-Gen Campaign</h1>
+    <p style="font-size:18px; max-width:30em; color:#cfe0f2; margin:0 0 36px; line-height:1.5;">A high-conversion creative system for FOMO.ai, 12 ad concepts engineered to turn US growth and marketing leaders into landing-page leads.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:500; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); padding:7px 14px; border-radius:999px;">United States</span>
+      <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:500; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); padding:7px 14px; border-radius:999px;">Click → Landing Page Lead</span>
+      <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:500; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); padding:7px 14px; border-radius:999px;">12 Concepts · 4 Formats</span>
+      <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:500; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); padding:7px 14px; border-radius:999px;">No talking-head video</span>
+    </div>
+  </div>
+</section>
+
+<div class="docbody" style="padding:0 clamp(28px,5vw,68px);">
+
+<!-- ===== SNAPSHOT ===== -->
+<section style="margin-top:44px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">01 · The Mission</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 14px; color:#174d80; letter-spacing:-.01em;">Sell "leads without paid ads", using paid ads that actually convert</h2>
+  <p style="font-size:16px; margin:0 0 24px; max-width:46em;">FOMO.ai gets brands found inside AI Search (ChatGPT, Google AI Overviews, Perplexity) and traditional search, a managed AI + human content engine at a fraction of agency cost. This campaign drives cold and warm US audiences to a landing-page form for the <strong>14-day free trial</strong>. Every asset is built to stop the scroll, frame the AI-search shift as urgent, and prove FOMO can be trusted with money-and-health-grade authority.</p>
+
+  <div class="keep" style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:8px;">
+    <div style="background:#e9f2fe; border-radius:14px; padding:18px 16px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:#174d80;">Lead</div>
+      <div style="font-size:13px; color:#5b7185; margin-top:2px;">Objective: landing-page form fill (trial / strategy call)</div>
+    </div>
+    <div style="background:#ddf8f1; border-radius:14px; padding:18px 16px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:#0c8253;">$2.75–3.5k</div>
+      <div style="font-size:13px; color:#5b7185; margin-top:2px;">MRR product price, high-intent, considered buyers</div>
+    </div>
+    <div style="background:#fff7db; border-radius:14px; padding:18px 16px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:#b5840a;">14 days</div>
+      <div style="font-size:13px; color:#5b7185; margin-top:2px;">Free trial, the core risk-reversal offer in every BOF ad</div>
+    </div>
+    <div style="background:#e9f2fe; border-radius:14px; padding:18px 16px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:#174d80;">12</div>
+      <div style="font-size:13px; color:#5b7185; margin-top:2px;">Concepts across awareness stages, ready to ship</div>
+    </div>
+  </div>
+
+  <div class="keep" style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px;">
+    <div style="border:1px solid #d8e4f0; border-radius:14px; padding:20px 22px;">
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; margin:0 0 10px; color:#174d80;">Primary KPI</h4>
+      <p style="font-size:14px; margin:0; color:#3c5670;">Cost per qualified lead (CPL) → trial start. Secondary: landing-page CVR, hook rate (3-sec video views / thruplays), cost per landing-page view.</p>
+    </div>
+    <div style="border:1px solid #d8e4f0; border-radius:14px; padding:20px 22px;">
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; margin:0 0 10px; color:#174d80;">The funnel</h4>
+      <p style="font-size:14px; margin:0; color:#3c5670;">Meta ad → message-matched landing page → short qualifying form → free-trial onboarding. No in-platform Instant Forms; we want intent + pixel data on-site.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIENCE ===== -->
+<section class="sectionbreak" style="margin-top:46px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">02 · Who We're Talking To</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 8px; color:#174d80; letter-spacing:-.01em;">Audience segments (US)</h2>
+  <p style="font-size:16px; margin:0 0 22px; max-width:46em;">Three core segments. Each concept below is tagged for the segment it speaks to best. Run as separate ad sets so creative, copy, and CPL can be read cleanly per segment.</p>
+
+  <div class="keep" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+    <div style="border-top:4px solid #438ae8; background:#f7fafe; border-radius:0 0 14px 14px; padding:18px 18px 20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:#174d80; margin-bottom:4px;">SMB founders & operators</div>
+      <div style="font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#438ae8; font-weight:600; margin-bottom:10px;">Primary</div>
+      <p style="font-size:13.5px; margin:0 0 10px; color:#3c5670;">10–200 employees. Founder, owner, head of growth. Wears many hats, no time for content, burned by agencies or thin AI tools.</p>
+      <p style="font-size:13px; margin:0; color:#5b7185;"><strong style="color:#174d80;">Pain:</strong> "I know I'm invisible in search and AI, but I can't afford $8k/mo or a full content team."</p>
+    </div>
+    <div style="border-top:4px solid #19866a; background:#f5fcf9; border-radius:0 0 14px 14px; padding:18px 18px 20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:#0c8253; margin-bottom:4px;">YMYL brands</div>
+      <div style="font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#19866a; font-weight:600; margin-bottom:10px;">Health · Finance · Legal</div>
+      <p style="font-size:13.5px; margin:0 0 10px; color:#3c5670;">Marketing leads at regulated, trust-sensitive brands (cf. Noom, PetMeds). E-E-A-T and authority are existential for ranking.</p>
+      <p style="font-size:13px; margin:0; color:#5b7185;"><strong style="color:#0c8253;">Pain:</strong> "AI only cites sources it trusts. In our category, generic AI content is a liability, we need credible authority at scale."</p>
+    </div>
+    <div style="border-top:4px solid #ebaa03; background:#fffcf2; border-radius:0 0 14px 14px; padding:18px 18px 20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:#b5840a; margin-bottom:4px;">In-house marketing teams</div>
+      <div style="font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#b5840a; font-weight:600; margin-bottom:10px;">Scale-ups</div>
+      <p style="font-size:13.5px; margin:0 0 10px; color:#3c5670;">VP/Director of Marketing or Demand Gen at funded scale-ups. Owns pipeline, under pressure to cut CAC and reduce paid dependency.</p>
+      <p style="font-size:13px; margin:0; color:#5b7185;"><strong style="color:#b5840a;">Pain:</strong> "Paid is getting expensive and SEO is slow. I need an organic channel that compounds without hiring a team."</p>
+    </div>
+  </div>
+  <p style="font-size:13px; color:#5b7185; margin:16px 0 0;"><strong style="color:#174d80;">Targeting starters:</strong> Lookalikes from customer / trial lists, retargeting (site visitors, video viewers, IG engagers), interest stacks (HubSpot, Semrush, Ahrefs, marketing-agency interests, founder/SaaS communities), and job-title layering (Marketing / Growth / Founder) where available. Exclude existing customers.</p>
+</section>
+
+<!-- ===== CREATIVE SYSTEM ===== -->
+<section class="sectionbreak" style="margin-top:46px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">03 · How It Should Look</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 18px; color:#174d80; letter-spacing:-.01em;">Creative system</h2>
+
+  <div class="keep" style="display:grid; grid-template-columns:1.1fr 1fr; gap:20px; margin-bottom:22px;">
+    <div style="border:1px solid #d8e4f0; border-radius:14px; padding:20px 22px;">
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; margin:0 0 14px; color:#174d80;">Palette</h4>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <div style="text-align:center;"><div style="width:54px; height:42px; border-radius:8px; background:#174d80;"></div><div style="font-size:10px; color:#5b7185; margin-top:3px;">#174D80</div></div>
+        <div style="text-align:center;"><div style="width:54px; height:42px; border-radius:8px; background:#438ae8;"></div><div style="font-size:10px; color:#5b7185; margin-top:3px;">#438AE8</div></div>
+        <div style="text-align:center;"><div style="width:54px; height:42px; border-radius:8px; background:#19866a;"></div><div style="font-size:10px; color:#5b7185; margin-top:3px;">#19866A</div></div>
+        <div style="text-align:center;"><div style="width:54px; height:42px; border-radius:8px; background:#93dbc8;"></div><div style="font-size:10px; color:#5b7185; margin-top:3px;">#93DBC8</div></div>
+        <div style="text-align:center;"><div style="width:54px; height:42px; border-radius:8px; background:#ebaa03;"></div><div style="font-size:10px; color:#5b7185; margin-top:3px;">#EBAA03</div></div>
+        <div style="text-align:center;"><div style="width:54px; height:42px; border-radius:8px; background:#e9f2fe; border:1px solid #d8e4f0;"></div><div style="font-size:10px; color:#5b7185; margin-top:3px;">#E9F2FE</div></div>
+      </div>
+      <p style="font-size:12.5px; color:#5b7185; margin:14px 0 0;">Deep blue is the brand anchor. Amber = the single attention/CTA accent (use sparingly, like the deck's pricing badge). Green/mint for "proof &amp; growth" cues. Avoid gradients.</p>
+    </div>
+    <div style="border:1px solid #d8e4f0; border-radius:14px; padding:20px 22px;">
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; margin:0 0 14px; color:#174d80;">Type &amp; logo</h4>
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#174d80; line-height:1;">Headlines</div>
+      <div style="font-size:12px; color:#5b7185; margin:2px 0 12px;">Space Grotesk, geometric, confident, bold</div>
+      <div style="font-size:15px; color:#1f3a52;">Body &amp; supporting copy</div>
+      <div style="font-size:12px; color:#5b7185; margin:2px 0 12px;">IBM Plex Sans, clean, legible at small sizes</div>
+      <p style="font-size:12.5px; color:#5b7185; margin:0;">Logo: white pill on dark/photo, dark pill on light. Min clear-space = pill height ÷ 2. Never recolor the pill.</p>
+    </div>
+  </div>
+
+  <div class="keep" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+    <div style="background:#f5fcf9; border:1px solid #cdeede; border-radius:14px; padding:18px 20px;">
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; margin:0 0 10px; color:#0c8253;">✓ Do</h4>
+      <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#3c5670; line-height:1.7;">
+        <li>One idea per asset; oversized headline reads in &lt;2 seconds</li>
+        <li>Motion graphics, kinetic type, screen-capture & AI-generated/abstract visuals</li>
+        <li>Lead with the AI-search shift, the number, or the proof</li>
+        <li>High contrast; keep text out of Meta's 9:16 safe zones</li>
+        <li>Real customer names &amp; logos (Noom, PetMeds, PB5star, HiveCast)</li>
+      </ul>
+    </div>
+    <div style="background:#fdf1ee; border:1px solid #f3c9bd; border-radius:14px; padding:18px 20px;">
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; margin:0 0 10px; color:#ca390b;">✕ Don't</h4>
+      <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#3c5670; line-height:1.7;">
+        <li>No talking-head / UGC presenter video (production bottleneck)</li>
+        <li>No gradient mush, stocky handshake photos, or clip-art robots</li>
+        <li>Don't bury the hook below the fold or under a logo</li>
+        <li>No more than one accent color competing for attention</li>
+        <li>No unsubstantiated claims, keep YMYL copy defensible</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:13px; color:#5b7185; margin:16px 0 0;"><strong style="color:#174d80;">Video without a face:</strong> all "video" concepts ship as AI-generated / motion-graphic assets, kinetic typography, animated UI mockups, chat-interface simulations, data viz. Captions baked in (sound-off default), ≤15s, hook in the first 1 second.</p>
+</section>
+
+<!-- ===== CONCEPTS INTRO ===== -->
+<section class="sectionbreak" style="margin-top:46px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">04 · The Creative</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 8px; color:#174d80; letter-spacing:-.01em;">12 ad concepts</h2>
+  <p style="font-size:16px; margin:0 0 18px; max-width:46em;">Organized by funnel stage. Each brief is production-ready: hook, on-asset copy, primary text, headline, CTA, visual direction, and the conversion rationale. Character counts target Meta's truncation limits (primary ~125, headline ~27–40).</p>
+  <div class="keep" style="display:flex; gap:18px; flex-wrap:wrap; font-size:13px; color:#3c5670; margin-bottom:6px;">
+    <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:11px; height:11px; border-radius:3px; background:#438ae8;"></span>TOF · Cold / problem-aware</span>
+    <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:11px; height:11px; border-radius:3px; background:#19866a;"></span>MOF · Solution-aware / consideration</span>
+    <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:11px; height:11px; border-radius:3px; background:#ebaa03;"></span>BOF · Proof / decision &amp; retargeting</span>
+  </div>
+</section>
+
+<!-- ===== CONCEPT CARDS ===== -->
+<div id="concepts" style="margin-top:18px; display:flex; flex-direction:column; gap:18px;"></div>
+
+<!-- ===== SPECS ===== -->
+<section class="sectionbreak" style="margin-top:46px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">05 · Production</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 16px; color:#174d80; letter-spacing:-.01em;">Format &amp; spec sheet</h2>
+  <div class="keep" style="overflow:hidden; border:1px solid #d8e4f0; border-radius:14px;">
+    <table style="width:100%; border-collapse:collapse; font-size:13px;">
+      <thead>
+        <tr style="background:#174d80; color:#fff; text-align:left;">
+          <th style="padding:11px 14px; font-family:'Space Grotesk',sans-serif; font-weight:600;">Placement</th>
+          <th style="padding:11px 14px; font-family:'Space Grotesk',sans-serif; font-weight:600;">Ratio</th>
+          <th style="padding:11px 14px; font-family:'Space Grotesk',sans-serif; font-weight:600;">Pixels</th>
+          <th style="padding:11px 14px; font-family:'Space Grotesk',sans-serif; font-weight:600;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-top:1px solid #e3ecf6;"><td style="padding:10px 14px; font-weight:600; color:#174d80;">Feed static</td><td style="padding:10px 14px;">4:5 (1:1 alt)</td><td style="padding:10px 14px;">1080×1350</td><td style="padding:10px 14px; color:#5b7185;">4:5 wins more real estate; export 1:1 as backup.</td></tr>
+        <tr style="border-top:1px solid #e3ecf6; background:#f7fafe;"><td style="padding:10px 14px; font-weight:600; color:#174d80;">Stories / Reels</td><td style="padding:10px 14px;">9:16</td><td style="padding:10px 14px;">1080×1920</td><td style="padding:10px 14px; color:#5b7185;">Keep copy/CTA clear of top 250px &amp; bottom 420px.</td></tr>
+        <tr style="border-top:1px solid #e3ecf6;"><td style="padding:10px 14px; font-weight:600; color:#174d80;">Carousel</td><td style="padding:10px 14px;">1:1 or 4:5</td><td style="padding:10px 14px;">1080×1080+</td><td style="padding:10px 14px; color:#5b7185;">3–6 cards; card 1 = hook, last = CTA. Consistent system.</td></tr>
+        <tr style="border-top:1px solid #e3ecf6; background:#f7fafe;"><td style="padding:10px 14px; font-weight:600; color:#174d80;">Video (motion)</td><td style="padding:10px 14px;">9:16 &amp; 4:5</td><td style="padding:10px 14px;">1080×1920</td><td style="padding:10px 14px; color:#5b7185;">≤15s, hook ≤1s, baked captions, MP4 H.264, sound-off safe.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px; color:#5b7185; margin:14px 0 0;"><strong style="color:#174d80;">Copy limits:</strong> Primary text front-load value in first ~125 chars · Headline 27–40 chars · Description optional · CTA button: <em>Sign Up</em> for trial concepts, <em>Learn More</em> for TOF/educational.</p>
+</section>
+
+<!-- ===== LANDING PAGE ===== -->
+<section style="margin-top:40px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">06 · Where The Click Lands</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 14px; color:#174d80; letter-spacing:-.01em;">Landing-page alignment</h2>
+  <p style="font-size:16px; margin:0 0 18px; max-width:46em;">Conversion is won after the click. Match the page to the ad that drove it, same hook, same promise, same visual. Build dedicated pages per stage (and ideally per top concept) rather than sending everyone to the homepage.</p>
+  <div class="keep" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+    <ul style="margin:0; padding-left:18px; font-size:14px; color:#3c5670; line-height:1.8;">
+      <li><strong style="color:#174d80;">Message match:</strong> the ad headline reappears as the H1.</li>
+      <li><strong style="color:#174d80;">One CTA:</strong> start the 14-day free trial / book strategy call.</li>
+      <li><strong style="color:#174d80;">Short form:</strong> name, work email, website, company size, qualify, don't interrogate.</li>
+    </ul>
+    <ul style="margin:0; padding-left:18px; font-size:14px; color:#3c5670; line-height:1.8;">
+      <li><strong style="color:#174d80;">Proof above the fold:</strong> customer logos + a testimonial.</li>
+      <li><strong style="color:#174d80;">Risk reversal:</strong> "14-day free trial · month-to-month · cancel anytime."</li>
+      <li><strong style="color:#174d80;">Speed:</strong> fast load, sticky CTA, UTM-tagged per concept.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== TESTING ===== -->
+<section style="margin-top:40px;">
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#438ae8; font-weight:600; margin-bottom:6px;">07 · Learn &amp; Scale</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; line-height:1.1; margin:0 0 14px; color:#174d80; letter-spacing:-.01em;">Testing &amp; measurement plan</h2>
+  <div class="keep" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+    <div style="background:#e9f2fe; border-radius:14px; padding:18px 20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#174d80; margin-bottom:8px;">Phase 1 · Angle test</div>
+      <p style="font-size:13.5px; color:#3c5670; margin:0;">Launch all 12 concepts at low budget across the 3 segments. Read 3-sec hook rate, CTR, and CPL. Kill the bottom third fast.</p>
+    </div>
+    <div style="background:#ddf8f1; border-radius:14px; padding:18px 20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#0c8253; margin-bottom:8px;">Phase 2 · Iterate</div>
+      <p style="font-size:13.5px; color:#3c5670; margin:0;">Take winning angles, produce 3–4 variants each (new hook, new format, new opener). Vary one element at a time.</p>
+    </div>
+    <div style="background:#fff7db; border-radius:14px; padding:18px 20px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#b5840a; margin-bottom:8px;">Phase 3 · Scale</div>
+      <p style="font-size:13.5px; color:#3c5670; margin:0;">Consolidate winners into a scaling campaign; expand lookalikes; keep a continuous retargeting layer running BOF proof + offer.</p>
+    </div>
+  </div>
+  <p style="font-size:13px; color:#5b7185; margin:18px 0 0;"><strong style="color:#174d80;">Refresh cadence:</strong> introduce 2–4 new creatives every 2 weeks to fight fatigue. <strong style="color:#174d80;">Naming:</strong> <code style="background:#eef3f9; padding:1px 6px; border-radius:5px; font-size:12px;">[Stage]_[Concept#]_[Format]_[Variant]</code> for clean reporting.</p>
+</section>
+
+<div style="margin-top:48px; border-top:1px solid #e3ecf6; padding-top:18px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+  <img src="assets/fomo-dark.png" alt="FOMO.ai" style="height:26px; width:auto;">
+  <span style="font-size:12px; color:#9aabbd;">Meta Ads Lead-Gen Campaign Brief · US Market · Confidential</span>
+</div>
+
+</div><!-- /docbody -->
+
+</td></tr></tbody>
+<tfoot><tr><td class="ftr-space" style="display:none;"></td></tr></tfoot>
+</table>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() { this.renderConcepts(); }
+  renderConcepts() {
+    const host = this.el && this.el.querySelector ? this.el.querySelector('#concepts') : document.getElementById('concepts');
+    const mount = document.getElementById('concepts') || host;
+    if (!mount) return;
+    const stageColor = { TOF: '#438ae8', MOF: '#19866a', BOF: '#ebaa03' };
+    const stageBg = { TOF: '#e9f2fe', MOF: '#ddf8f1', BOF: '#fff7db' };
+    const stageInk = { TOF: '#174d80', MOF: '#0c8253', BOF: '#b5840a' };
+    const concepts = [
+      { n:'01', stage:'TOF', name:'The AI Search Shift', seg:'All segments', fmt:'Feed 4:5 · Reel 9:16',
+        hook:'"Your customers stopped Googling. They\u2019re asking AI."',
+        primary:'67% of buyers now research in ChatGPT &amp; Google AI before they ever visit a site. If AI can\u2019t find you, you don\u2019t exist. FOMO.ai gets you cited, done for you.',
+        headline:'Get found inside AI search', cta:'Learn More',
+        visual:'Bold kinetic-type statement on deep-blue. A search bar morphs from "Google" into a ChatGPT-style chat answer that name-drops the brand. Motion version animates the morph in 1s.',
+        why:'Names an urgent, under-priced shift the buyer feels but hasn\u2019t solved. Pure pattern-interrupt for cold traffic.' },
+      { n:'02', stage:'TOF', name:'SEO Is Not Enough', seg:'In-house teams · SMB', fmt:'Feed 1:1 · Static',
+        hook:'"SEO got you ranked. AI search just made that invisible."',
+        primary:'Ranking #1 on Google means nothing if the AI answer above it never mentions you. SEO + GEO + AEO is the new game. We run all three.',
+        headline:'SEO alone won\u2019t save you', cta:'Learn More',
+        visual:'Contrarian split layout: faded "SEO" struck through on the left, crisp "AI Search" glowing on the right. Single amber underline accent.',
+        why:'Contrarian claim earns the click from marketers who think they\u2019ve "done SEO." Reframes their status quo as a gap.' },
+      { n:'03', stage:'TOF', name:'Ask AI About Yourself', seg:'SMB founders', fmt:'Carousel (4 cards)',
+        hook:'"Ask ChatGPT to recommend a company like yours. Are you on the list?"',
+        primary:'Most founders try it once and go pale. Here\u2019s the 4-step check to see if AI trusts your brand, and what to do about it.',
+        headline:'Does AI know you exist?', cta:'Learn More',
+        visual:'Card 1 hook question. Cards 2\u20133 = a simulated chat interface where a competitor gets named instead of you. Card 4 = FOMO fix + CTA. Chat UI in brand blues.',
+        why:'Interactive curiosity gap + a self-test the viewer can\u2019t resist running. Carousel earns dwell time and cheap engagement.' },
+      { n:'04', stage:'TOF', name:'The Invisible Spend', seg:'In-house teams', fmt:'Reel 9:16 · Motion',
+        hook:'"You\u2019re paying for content nobody, and no AI, ever sees."',
+        primary:'Blog posts that don\u2019t rank. Agencies that don\u2019t deliver. Tools that spit generic AI slop. There\u2019s a third way: AI scale + human craft.',
+        headline:'Stop funding invisible content', cta:'Learn More',
+        visual:'Problem-agitate-solve motion: stacks of "published" posts dissolve into static/noise, then resolve into a clean FOMO content engine dashboard. Sound-off captions.',
+        why:'PAS structure hits a budget wound, then offers relief. 9:16 motion maximizes cheap reach on Reels.' },
+      { n:'05', stage:'MOF', name:'The Sweet Spot', seg:'All segments', fmt:'Feed 4:5 · Static',
+        hook:'"Agency results. Without the $8k agency invoice."',
+        primary:'Agencies cost $5\u201310k/mo and move slow. DIY tools are cheap and generic. FOMO.ai is the middle: AI scale + strategic human craft from $2,750/mo.',
+        headline:'Agency depth, SaaS price', cta:'Learn More',
+        visual:'Three-column comparison (Agency $5\u201310k / FOMO $2.75\u20133.5k / Tools $50\u2013500) with FOMO elevated center, amber badge. Lifts the deck\u2019s positioning chart.',
+        why:'Anchoring against expensive agencies makes the price feel like a steal; positions FOMO as the obvious smart-money choice.' },
+      { n:'06', stage:'MOF', name:'AI Scale, Human Craft', seg:'YMYL · In-house', fmt:'Carousel (5 cards)',
+        hook:'"Generic AI content is a liability. Especially in your category."',
+        primary:'AI gives you volume. Humans give you trust. We combine both so your content actually ranks and converts, content you\u2019re proud to publish.',
+        headline:'Not another AI slop machine', cta:'Learn More',
+        visual:'Carousel contrasting "AI-only output" vs "AI + human craft" card by card, thin/generic vs rich/credible. Final card = workflow + CTA.',
+        why:'Directly defuses the #1 objection (AI = low quality) for sophisticated buyers, especially YMYL.' },
+      { n:'07', stage:'MOF', name:'The Playbook', seg:'In-house teams', fmt:'Carousel (7 cards)',
+        hook:'"The 7 steps to win AI search, the exact playbook we run."',
+        primary:'Audit what\u2019s hurting you \u2192 fix on-site \u2192 find real competitors \u2192 build authority \u2192 map money questions \u2192 create better-than-human content \u2192 layer in first-party experience.',
+        headline:'The AI-search playbook', cta:'Learn More',
+        visual:'One step per card, numbered 01\u201307, mirroring the deck\u2019s blue step-grid. Educational, value-first; last card invites the trial.',
+        why:'Gives away the strategy to build authority &amp; trust, the value-first ad that warms skeptical, sophisticated marketers.' },
+      { n:'08', stage:'MOF', name:'Two Ways To Run It', seg:'SMB founders', fmt:'Feed 4:5 · Static',
+        hook:'"Same playbook. Pick your level of help."',
+        primary:'Done-For-You at $2,750/mo for sites already in shape, or Done-For-You + an AI-ready website at $3,500/mo when your site isn\u2019t trusted yet. 14-day free trial either way.',
+        headline:'Two plans. One outcome.', cta:'Sign Up',
+        visual:'Clean two-card pricing layout from the deck (mint card + dark-blue card with amber badge). Trial line under both.',
+        why:'Offer clarity removes friction for ready-to-act buyers and pre-qualifies by site readiness.' },
+      { n:'09', stage:'BOF', name:'Sales Every Day', seg:'All · Retargeting', fmt:'Feed 4:5 · Static',
+        hook:'"We generate sales every day from the content we post."',
+        primary:'Angela Caltagirone, CDMO @ PB5star. FOMO\u2019s AI + human team scales your growth at a fraction of the cost. See what it does for you in 14 days.',
+        headline:'Real results, real customers', cta:'Sign Up',
+        visual:'Testimonial card on deep-blue with 5-star rating, customer headshot + title, FOMO logo. Mirrors the deck\u2019s proof slide. Amber star accent.',
+        why:'Specific, outcome-based proof from a named operator converts warm retargeting audiences sitting on the fence.' },
+      { n:'10', stage:'BOF', name:'Trusted By', seg:'All · Retargeting', fmt:'Feed 1:1 · Static',
+        hook:'"Noom. PetMeds. PB5star. HiveCast. AbundaBox."',
+        primary:'Growth teams that can\u2019t afford to be invisible trust FOMO.ai to own AI search. Join them, start your 14-day free trial.',
+        headline:'In good company', cta:'Sign Up',
+        visual:'Clean logo wall on light or deep-blue, FOMO pill anchored. Lots of whitespace; logos are the hero. One short proof line.',
+        why:'Borrowed credibility + recognizable brands (incl. YMYL) lowers perceived risk at the decision moment.' },
+      { n:'11', stage:'BOF', name:'AI Cites Who It Trusts', seg:'YMYL brands', fmt:'Reel 9:16 · Motion',
+        hook:'"In health &amp; finance, AI only recommends sources it trusts."',
+        primary:'YMYL is where authority is everything. We build the credibility, topical authority, expert content, first-party experience, that earns AI\u2019s citation. Defensibly.',
+        headline:'Built for YMYL trust', cta:'Sign Up',
+        visual:'Motion: an AI answer assembling citations, FOMO-built source rising to the top with a trust check-mark. Restrained, credible, no hype.',
+        why:'Segment-specific authority angle speaks directly to regulated brands\u2019 existential need, high relevance, high intent.' },
+      { n:'12', stage:'BOF', name:'14 Days, Done For You', seg:'All · Retargeting', fmt:'Feed 4:5 · Reel 9:16',
+        hook:'"Leads without paid ads. Start free for 14 days."',
+        primary:'Month-to-month. Done for you. No long contract, no agency retainer. See the content engine work on your brand before you pay a cent.',
+        headline:'Try it free for 14 days', cta:'Sign Up',
+        visual:'Direct-response layout: bold offer, amber CTA bar, trial + risk-reversal stamps ("month-to-month · cancel anytime"). FOMO pill bottom-right.',
+        why:'Maximum risk reversal at the decision point, the closer ad for everyone who engaged but didn\u2019t convert.' },
+    ];
+    mount.innerHTML = concepts.map(c => `
+      <div class="concept" style="border:1px solid #d8e4f0; border-left:6px solid ${stageColor[c.stage]}; border-radius:14px; overflow:hidden;">
+        <div style="display:flex; align-items:center; gap:14px; padding:16px 20px; background:#f7fafe; flex-wrap:wrap;">
+          <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; color:${stageColor[c.stage]}; line-height:1;">${c.n}</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:19px; color:#174d80; flex:1; min-width:160px;">${c.name}</span>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:${stageInk[c.stage]}; background:${stageBg[c.stage]}; padding:5px 11px; border-radius:999px;">${c.stage}</span>
+          <span style="font-size:11.5px; font-weight:500; color:#5b7185; background:#fff; border:1px solid #d8e4f0; padding:5px 11px; border-radius:999px;">${c.fmt}</span>
+        </div>
+        <div style="padding:18px 20px 20px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#174d80; line-height:1.3; margin-bottom:16px;">${c.hook}</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px 22px;">
+            <div>
+              <div style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#9aabbd; margin-bottom:4px;">Primary text</div>
+              <p style="font-size:13.5px; color:#3c5670; margin:0 0 14px; line-height:1.55;">${c.primary}</p>
+              <div style="display:flex; gap:18px; flex-wrap:wrap;">
+                <div><div style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#9aabbd; margin-bottom:4px;">Headline</div><div style="font-size:13.5px; color:#174d80; font-weight:600;">${c.headline}</div></div>
+                <div><div style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#9aabbd; margin-bottom:4px;">CTA</div><div style="font-size:13px; color:#fff; background:${stageColor[c.stage]==='#ebaa03'?'#b5840a':stageColor[c.stage]}; display:inline-block; padding:3px 12px; border-radius:7px; font-weight:600;">${c.cta}</div></div>
+                <div><div style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#9aabbd; margin-bottom:4px;">Segment</div><div style="font-size:13px; color:#3c5670;">${c.seg}</div></div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#9aabbd; margin-bottom:4px;">Visual direction</div>
+              <p style="font-size:13px; color:#3c5670; margin:0 0 14px; line-height:1.55;">${c.visual}</p>
+              <div style="background:${stageBg[c.stage]}; border-radius:10px; padding:11px 13px;">
+                <div style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:${stageInk[c.stage]}; margin-bottom:3px;">Why it converts</div>
+                <p style="font-size:12.5px; color:#3c5670; margin:0; line-height:1.5;">${c.why}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`).join('');
+  }
+}
+</script>
+</body>
+</html>

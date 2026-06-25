@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  .seclbl { font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; color:#143f6b; }
+  .seclbl span { color:#9aabbd; font-weight:400; }
+  .lbl { font-family:'IBM Plex Sans',sans-serif; font-size:18px; font-weight:500; color:#7e93a8; margin-bottom:14px; cursor:default; }
+  .ad { font-family:'IBM Plex Sans',sans-serif; overflow:hidden; box-sizing:border-box; box-shadow:0 16px 50px rgba(20,63,107,.18); position:relative; }
+  .eyebrow { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:.16em; text-transform:uppercase; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  @keyframes ctaPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.03)} }
+  @keyframes progress { 0%{width:0} 100%{width:100%} }
+  @keyframes glowRow { 0%,100%{box-shadow:inset 0 0 0 0 rgba(235,170,3,0)} 50%{box-shadow:inset 0 0 0 3px #ebaa03} }
+  @keyframes floatY { 0%,100%{transform:translateY(0) rotate(3deg)} 50%{transform:translateY(-12px) rotate(3deg)} }
+</style>
+</helmet>
+
+<div class="seclbl" style="position:absolute; left:0px; top:0px;">Designed direction &nbsp;<span>2 samples · 4:5 · 1080×1350 · drop real photos/logos into the slots</span></div>
+
+<!-- ===== AD A · AI ANSWER MOCKUP (dark, layered) ===== -->
+<div style="position:absolute; left:0px; top:64px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">A_ai-answer-mockup · TOF</div>
+  <div class="ad" style="width:1080px; height:1350px; background:#102f53; border-radius:14px;">
+    <!-- depth shapes -->
+    <div style="position:absolute; left:-180px; bottom:-200px; width:620px; height:620px; border-radius:50%; background:#ebaa03; opacity:.14;"></div>
+    <div style="position:absolute; right:-140px; top:-140px; width:440px; height:440px; border-radius:50%; border:2px solid #2f5d8a;"></div>
+    <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.05) 2px, transparent 2px); background-size:42px 42px;"></div>
+
+    <div style="position:relative; z-index:2; height:100%; padding:54px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#93dbc8;">The new front page</div>
+        <img src="assets/fomo-light.png" alt="FOMO.ai" style="height:46px; width:auto;">
+      </div>
+
+      <!-- browser / AI answer card -->
+      <div style="margin-top:26px; transform:rotate(-1.5deg);">
+        <div style="background:#fff; border-radius:22px 22px 24px 24px; box-shadow:0 40px 70px rgba(0,0,0,.4); overflow:hidden;">
+          <div style="display:flex; align-items:center; gap:14px; padding:22px 26px; border-bottom:1px solid #eef2f7;">
+            <div style="display:flex; gap:9px;"><span style="width:15px;height:15px;border-radius:50%;background:#ff5f57;"></span><span style="width:15px;height:15px;border-radius:50%;background:#febc2e;"></span><span style="width:15px;height:15px;border-radius:50%;background:#28c840;"></span></div>
+            <div style="flex:1; background:#f0f4f9; border-radius:999px; padding:11px 22px; font-size:22px; color:#8a99a8; font-family:'IBM Plex Sans',sans-serif;">chatgpt.com</div>
+          </div>
+          <div style="padding:24px 30px 26px;">
+            <div style="display:flex; align-items:flex-start; gap:18px;">
+              <image-slot id="da-asker" style="width:60px;height:60px;flex:none;" shape="circle" placeholder="photo"></image-slot>
+              <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:26px; color:#243b52; line-height:1.3;">Who are the best providers for this in 2026?</div>
+            </div>
+            <div style="display:flex; gap:16px; margin-top:30px;">
+              <div style="width:48px;height:48px;flex:none;border-radius:12px;background:#143f6b;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:26px;">✦</div>
+              <div style="font-size:23px; line-height:1.45; color:#41566c;">Based on current sources, the most recommended option is <span style="font-weight:700; color:#143f6b; box-shadow:inset 0 -13px 0 #ffe28a;">your brand</span>, cited across trusted industry sites.</div>
+            </div>
+            <div style="display:flex; gap:12px; margin-top:30px; flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:10px;background:#ddf8f1;border:1.5px solid #19866a;border-radius:12px;padding:13px 18px;"><span style="width:20px;height:20px;border-radius:5px;background:#19866a;"></span><span style="font-size:21px;font-weight:600;color:#0c5a3a;">yourbrand.com</span></div>
+              <div style="display:flex;align-items:center;gap:10px;background:#f0f4f9;border-radius:12px;padding:13px 18px;"><span style="width:20px;height:20px;border-radius:5px;background:#c2cedb;"></span><span style="font-size:21px;color:#8a99a8;">competitor.com</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- floating stat badge -->
+      <div style="position:absolute; right:48px; top:330px; transform:rotate(3deg); background:#0c8253; border-radius:18px; padding:22px 26px; box-shadow:0 24px 44px rgba(0,0,0,.32); z-index:3;">
+        <div style="font-size:19px; color:#bde6d6; font-weight:500;">AI mentions</div>
+        <div style="display:flex; align-items:flex-end; gap:14px; margin-top:8px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:50px; color:#fff; line-height:.9;">▲ 4.2×</div>
+          <div style="display:flex; align-items:flex-end; gap:5px; height:48px;"><span style="width:9px;height:40%;background:#7fd3b6;border-radius:3px;"></span><span style="width:9px;height:58%;background:#7fd3b6;border-radius:3px;"></span><span style="width:9px;height:80%;background:#ffe999;border-radius:3px;"></span><span style="width:9px;height:100%;background:#ffe999;border-radius:3px;"></span></div>
+        </div>
+      </div>
+
+      <!-- headline + cta -->
+      <div style="margin-top:40px;">
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:60px; line-height:1.0; letter-spacing:-.03em; color:#fff; margin:0;">When buyers ask AI,<br>be the name it says.</h1>
+        <div style="display:flex; align-items:center; gap:24px; margin-top:36px;">
+          <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:33px; background:#ebaa03; color:#143f6b; padding:22px 44px; border-radius:999px;">Get cited by AI →</span>
+          <span style="font-size:25px; color:#9fc0e0;">14-day free trial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD B · GROWTH DASHBOARD (light, data viz + logos) ===== -->
+<div style="position:absolute; left:1220px; top:64px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">B_growth-proof · BOF</div>
+  <div class="ad" style="width:1080px; height:1350px; background:#eaf1fa; border-radius:14px;">
+    <div style="position:absolute; right:-160px; top:-160px; width:520px; height:520px; border-radius:50%; background:#cfe0f5;"></div>
+    <div style="position:absolute; left:-120px; bottom:-160px; width:420px; height:420px; border-radius:50%; background:#dff0e9;"></div>
+
+    <div style="position:relative; z-index:2; height:100%; padding:54px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#438ae8;">Real momentum</div>
+        <img src="assets/fomo-dark.png" alt="FOMO.ai" style="height:46px; width:auto;">
+      </div>
+
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:58px; line-height:1.0; letter-spacing:-.03em; color:#143f6b; margin:24px 0 0;">Sales &amp; leads,<br>without paid ads.</h1>
+
+      <!-- dashboard card with chart -->
+      <div data-om-raster style="margin-top:44px; background:#fff; border-radius:22px; box-shadow:0 28px 56px rgba(20,63,107,.16); padding:26px 30px;">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <div>
+            <div style="font-size:23px; color:#8a99a8;">AI Search visibility</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:48px; color:#143f6b; margin-top:4px;">+312%</div>
+          </div>
+          <div style="background:#ddf8f1; color:#0c8253; font-weight:700; font-family:'Space Grotesk',sans-serif; font-size:24px; padding:12px 22px; border-radius:999px;">▲ trending</div>
+        </div>
+        <svg viewBox="0 0 620 240" style="width:100%; height:180px; margin-top:14px; display:block;">
+          <line x1="0" y1="60" x2="620" y2="60" stroke="#eef2f7" stroke-width="2"/>
+          <line x1="0" y1="120" x2="620" y2="120" stroke="#eef2f7" stroke-width="2"/>
+          <line x1="0" y1="180" x2="620" y2="180" stroke="#eef2f7" stroke-width="2"/>
+          <polygon points="0,210 100,196 210,176 320,150 430,104 540,52 620,24 620,240 0,240" fill="#e9f2fe"/>
+          <polyline points="0,210 100,196 210,176 320,150 430,104 540,52 620,24" fill="none" stroke="#438ae8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="620" cy="24" r="11" fill="#ebaa03" stroke="#fff" stroke-width="4"/>
+        </svg>
+        <div style="display:flex; justify-content:space-between; font-size:19px; color:#9aabbd; margin-top:6px;"><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span></div>
+      </div>
+
+      <!-- customer logos -->
+      <div style="margin-top:40px;">
+        <div style="font-size:21px; color:#7e93a8; margin-bottom:18px;">Powering growth for</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+          <image-slot id="db-logo1" style="width:100%;height:62px;" shape="rounded" radius="14" fit="contain" placeholder="Logo"></image-slot>
+          <image-slot id="db-logo2" style="width:100%;height:62px;" shape="rounded" radius="14" fit="contain" placeholder="Logo"></image-slot>
+          <image-slot id="db-logo3" style="width:100%;height:62px;" shape="rounded" radius="14" fit="contain" placeholder="Logo"></image-slot>
+        </div>
+        <span style="display:inline-block; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:33px; background:#ebaa03; color:#143f6b; padding:22px 44px; border-radius:999px; margin-top:32px;">Start free for 14 days →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD C · COMPARISON (light, overlapping cards) ===== -->
+<div style="position:absolute; left:0px; top:1540px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">C_sweet-spot · MOF</div>
+  <div class="ad" style="width:1080px; height:1350px; background:#eaf1fa; border-radius:14px;">
+    <div style="position:absolute; left:50%; top:54%; width:760px; height:760px; border-radius:50%; background:#dfeaf7; transform:translate(-50%,-50%);"></div>
+    <div style="position:relative; z-index:2; height:100%; padding:54px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#438ae8;">Where we fit</div>
+        <img src="assets/fomo-dark.png" alt="FOMO.ai" style="height:46px; width:auto;">
+      </div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:64px; line-height:1.0; letter-spacing:-.03em; color:#143f6b; margin:30px 0 0;">Agency depth.<br>SaaS price.</h1>
+      <div style="display:flex; align-items:center; justify-content:center; margin-top:64px;">
+        <div style="background:#fff; border:1px solid #dce7f3; border-radius:20px; padding:30px 22px; text-align:center; width:240px; box-shadow:0 10px 24px rgba(20,63,107,.08);">
+          <div style="font-size:20px; color:#9aabbd; text-transform:uppercase; letter-spacing:.08em;">Agency</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; color:#b3c0cf; text-decoration:line-through; margin-top:10px;">$5–10k</div>
+          <div style="font-size:19px; color:#b3c0cf; margin-top:4px;">slow</div>
+        </div>
+        <div style="background:#143f6b; border-radius:24px; padding:42px 28px 34px; text-align:center; width:300px; margin:0 -22px; z-index:3; box-shadow:0 30px 56px rgba(20,63,107,.4); position:relative;">
+          <div style="position:absolute; top:-20px; left:50%; transform:translateX(-50%); font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:17px; letter-spacing:.08em; background:#ebaa03; color:#143f6b; padding:9px 20px; border-radius:999px; white-space:nowrap;">THE SWEET SPOT</div>
+          <div style="font-size:20px; color:#93dbc8; text-transform:uppercase; letter-spacing:.08em;">FOMO.ai</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:50px; color:#fff; margin-top:10px;">$2.75–3.5k</div>
+          <div style="font-size:19px; color:#cfe0f2; margin-top:4px;">AI + human</div>
+        </div>
+        <div style="background:#fff; border:1px solid #dce7f3; border-radius:20px; padding:30px 22px; text-align:center; width:240px; box-shadow:0 10px 24px rgba(20,63,107,.08);">
+          <div style="font-size:20px; color:#9aabbd; text-transform:uppercase; letter-spacing:.08em;">DIY tools</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; color:#b3c0cf; text-decoration:line-through; margin-top:10px;">$50–500</div>
+          <div style="font-size:19px; color:#b3c0cf; margin-top:4px;">generic</div>
+        </div>
+      </div>
+      <div style="margin-top:40px;">
+        <p style="font-size:29px; color:#3c5670; line-height:1.35; margin:0 0 28px;">AI scale plus strategic human craft. The middle path that compounds.</p>
+        <span style="display:inline-block; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; background:#ebaa03; color:#143f6b; padding:21px 44px; border-radius:999px;">See the plans →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD D · TESTIMONIAL CARD (dark, floating review) ===== -->
+<div style="position:absolute; left:1220px; top:1540px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">D_testimonial-card · BOF</div>
+  <div class="ad" style="width:1080px; height:1350px; background:#0c8253; border-radius:14px;">
+    <div style="position:absolute; right:-150px; top:-150px; width:480px; height:480px; border-radius:50%; background:#0a6e46;"></div>
+    <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.05) 2px, transparent 2px); background-size:42px 42px;"></div>
+    <div style="position:relative; z-index:2; height:100%; padding:54px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#c3edd2;">Customer proof</div>
+        <img src="assets/fomo-light.png" alt="FOMO.ai" style="height:46px; width:auto;">
+      </div>
+      <!-- floating review card -->
+      <div style="margin-top:56px; background:#fff; border-radius:24px; box-shadow:0 36px 64px rgba(0,0,0,.32); padding:40px; transform:rotate(-1.5deg);">
+        <div style="display:flex; align-items:center; gap:20px;">
+          <image-slot id="dd-avatar" style="width:84px;height:84px;flex:none;" shape="circle" placeholder="photo"></image-slot>
+          <div style="flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; color:#243b52;">Angela Caltagirone</div>
+            <div style="font-size:23px; color:#8a99a8;">CDMO, PB5star</div>
+          </div>
+          <div style="font-size:30px; letter-spacing:3px; color:#ebaa03;">★★★★★</div>
+        </div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:38px; line-height:1.25; color:#243b52; margin-top:30px;">“We generate <span style="box-shadow:inset 0 -14px 0 #ffe28a;">sales every day</span> from the content we post.”</div>
+      </div>
+      <!-- floating badge -->
+      <div style="position:absolute; right:64px; top:520px; z-index:3; background:#ebaa03; color:#143f6b; border-radius:18px; padding:18px 24px; box-shadow:0 20px 40px rgba(0,0,0,.3); text-align:center; animation:floatY 4s ease-in-out infinite;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:38px; line-height:1;">5.0</div>
+        <div style="font-size:16px; font-weight:600;">avg rating</div>
+      </div>
+      <div style="margin-top:40px;">
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:62px; line-height:1.0; letter-spacing:-.03em; color:#fff; margin:0;">Proof, not promises.</h1>
+        <div style="display:flex; align-items:center; gap:24px; margin-top:30px;">
+          <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; background:#ebaa03; color:#143f6b; padding:21px 44px; border-radius:999px;">Get the same →</span>
+          <span style="font-size:24px; color:#bde6d6;">14-day free trial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD E · YMYL TRUST (1:1, AI citations + shield) ===== -->
+<div style="position:absolute; left:2440px; top:1540px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">E_ymyl-trust · BOF</div>
+  <div class="ad" style="width:1080px; height:1080px; background:#102f53; border-radius:14px;">
+    <div style="position:absolute; left:-160px; bottom:-180px; width:520px; height:520px; border-radius:50%; background:#ebaa03; opacity:.12;"></div>
+    <div style="position:relative; z-index:2; height:100%; padding:54px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#93dbc8;">For YMYL brands</div>
+        <img src="assets/fomo-light.png" alt="FOMO.ai" style="height:44px; width:auto;">
+      </div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:58px; line-height:1.02; letter-spacing:-.03em; color:#fff; margin:24px 0 0;">In health &amp; finance, AI only cites who it <span style="color:#ebaa03;">trusts.</span></h1>
+      <div style="margin-top:44px; background:#fff; border-radius:20px; box-shadow:0 30px 56px rgba(0,0,0,.35); padding:30px;">
+        <div style="font-size:22px; color:#8a99a8; margin-bottom:18px;">Trusted sources</div>
+        <div style="display:flex; align-items:center; gap:16px; background:#ddf8f1; border:2px solid #19866a; border-radius:14px; padding:20px 22px;">
+          <div style="width:44px;height:44px;flex:none;border-radius:12px;background:#19866a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;">✓</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;color:#0c5a3a;">Your brand</div>
+          <div style="margin-left:auto;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:#143f6b;background:#ebaa03;padding:7px 14px;border-radius:999px;">TRUSTED</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px; padding:18px 22px 0; opacity:.4;">
+          <div style="width:44px;height:44px;flex:none;border-radius:12px;background:#eef2f7;"></div>
+          <div style="flex:1;height:16px;border-radius:8px;background:#eef2f7;"></div>
+        </div>
+      </div>
+      <div style="margin-top:40px; display:flex; align-items:center; gap:22px;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; background:#ebaa03; color:#143f6b; padding:20px 42px; border-radius:999px;">Built for YMYL →</span>
+        <span style="font-size:23px; color:#9fc0e0;">Authority, done for you</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION · MOTION REELS (designed) ===== -->
+<div class="seclbl" style="position:absolute; left:0px; top:3020px;">Motion reels &nbsp;<span>9:16 · 1080×1920 · animated, looping</span></div>
+
+<!-- R · AI SHIFT (designed motion) -->
+<div style="position:absolute; left:0px; top:3084px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">R_ai-shift · Reel</div>
+  <div class="ad" style="width:1080px; height:1920px; background:#102f53; border-radius:14px;">
+    <div style="position:absolute; left:-180px; bottom:-200px; width:620px; height:620px; border-radius:50%; background:#ebaa03; opacity:.14;"></div>
+    <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.05) 2px, transparent 2px); background-size:46px 46px;"></div>
+    <div style="position:relative; z-index:2; height:100%; padding:280px 60px 80px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#93dbc8;">The shift<span style="animation:blink 1s step-end infinite;">_</span></div>
+        <img src="assets/fomo-light.png" alt="FOMO.ai" style="height:50px; width:auto;">
+      </div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:98px; line-height:.96; letter-spacing:-.03em; color:#fff; margin:52px 0 0;">Be the name<br>AI <span style="color:#ebaa03;">says.</span></h1>
+      <div style="margin-top:54px; background:#fff; border-radius:24px; box-shadow:0 40px 70px rgba(0,0,0,.4); overflow:hidden; transform:rotate(-1.5deg);">
+        <div style="display:flex; align-items:center; gap:14px; padding:22px 26px; border-bottom:1px solid #eef2f7;">
+          <div style="display:flex; gap:9px;"><span style="width:15px;height:15px;border-radius:50%;background:#ff5f57;"></span><span style="width:15px;height:15px;border-radius:50%;background:#febc2e;"></span><span style="width:15px;height:15px;border-radius:50%;background:#28c840;"></span></div>
+          <div style="flex:1; background:#f0f4f9; border-radius:999px; padding:11px 22px; font-size:22px; color:#8a99a8;">chatgpt.com</div>
+        </div>
+        <div style="padding:32px;">
+          <div style="font-size:26px; color:#8a99a8; margin-bottom:22px;">Best providers for this?</div>
+          <div style="display:flex; align-items:center; gap:16px; border-radius:16px; padding:22px 24px; animation:glowRow 3s ease-in-out infinite;">
+            <div style="width:48px;height:48px;flex:none;border-radius:12px;background:#143f6b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px;">✦</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;color:#143f6b;">Your brand</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:16px; padding:20px 24px 0; opacity:.4;"><div style="width:48px;height:48px;flex:none;border-radius:12px;background:#eef2f7;"></div><div style="flex:1;height:16px;border-radius:8px;background:#eef2f7;"></div></div>
+        </div>
+      </div>
+      <div style="margin-top:40px;">
+        <p style="font-size:36px; color:#cfe0f2; line-height:1.3; margin:0 0 30px;">FOMO.ai gets you cited in AI search. Done for you.</p>
+        <span style="display:inline-block; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; background:#ebaa03; color:#143f6b; padding:26px 52px; border-radius:999px; animation:ctaPulse 2.4s ease-in-out infinite;">Get found →</span>
+      </div>
+    </div>
+    <div style="position:absolute; left:0; bottom:0; width:100%; height:10px; background:rgba(255,255,255,.16);"><div style="height:100%; background:#ebaa03; animation:progress 6s linear infinite;"></div></div>
+  </div>
+</div>
+
+<!-- R · OFFER (designed motion) -->
+<div style="position:absolute; left:1220px; top:3084px; width:1080px;">
+  <div class="lbl" data-drags-parent="1">R_offer · Reel</div>
+  <div class="ad" style="width:1080px; height:1920px; background:#0c8253; border-radius:14px;">
+    <div style="position:absolute; right:-160px; top:-160px; width:520px; height:520px; border-radius:50%; background:#0a6e46;"></div>
+    <div style="position:relative; z-index:2; height:100%; padding:280px 60px 80px; display:flex; flex-direction:column;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="eyebrow" style="color:#c3edd2;">The offer<span style="animation:blink 1s step-end infinite;">_</span></div>
+        <img src="assets/fomo-light.png" alt="FOMO.ai" style="height:50px; width:auto;">
+      </div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:118px; line-height:.92; letter-spacing:-.035em; color:#fff; margin:60px 0 0;">Leads<br>without<br><span style="color:#ffe999;">paid ads.</span></h1>
+      <!-- floating proof card -->
+      <div style="margin-top:54px; background:#fff; border-radius:22px; box-shadow:0 36px 64px rgba(0,0,0,.3); padding:34px; transform:rotate(-1.5deg);">
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; align-items:center; gap:14px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:32px; color:#0c5a3a;"><span style="width:38px;height:38px;border-radius:50%;background:#19866a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;">✓</span> Done for you</div>
+          <div style="display:flex; align-items:center; gap:14px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:32px; color:#0c5a3a;"><span style="width:38px;height:38px;border-radius:50%;background:#19866a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;">✓</span> Month to month</div>
+          <div style="display:flex; align-items:center; gap:14px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:32px; color:#0c5a3a;"><span style="width:38px;height:38px;border-radius:50%;background:#19866a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;">✓</span> Cancel anytime</div>
+        </div>
+      </div>
+      <div style="margin-top:40px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:48px; background:#ebaa03; color:#143f6b; padding:34px 0; border-radius:22px; text-align:center; animation:ctaPulse 2.4s ease-in-out infinite;">Try free for 14 days</div>
+    </div>
+    <div style="position:absolute; left:0; bottom:0; width:100%; height:10px; background:rgba(255,255,255,.18);"><div style="height:100%; background:#ffe999; animation:progress 6s linear infinite;"></div></div>
+  </div>
+</div></x-dc>
+</body>
+</html>
