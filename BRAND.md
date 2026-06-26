@@ -37,6 +37,16 @@ and leads that don't depend on paid advertising) by winning the new generation
 of search: traditional SEO and the AI answer engines (ChatGPT, Google AI
 Overviews, Perplexity, Gemini) where buyers increasingly start.
 
+### Product & pricing
+- **What it is:** a managed AI + human content engine that gets brands found in
+  AI Search (ChatGPT, Google AI Overviews, Perplexity) and traditional search
+  (SEO, GEO, AEO).
+- **Plans:** Done-For-You at **$2,750/mo**; Done-For-You + AI Website at
+  **$3,500/mo**. **14-day free trial. Month to month** (cancel anytime).
+- **Where we sit:** between full agencies ($5–10k/mo) and DIY AI tools
+  ($50–500/mo). The sweet spot: agency depth at SaaS price.
+- **Customers:** Noom, PetMeds, PB5star, HiveCast.fm, AbundaBox.
+
 ### The name is the thesis
 "FOMO," fear of missing out, is reframed, not feared. AI has disrupted every
 proven marketing tactic. Most brands are frozen. **The opportunity is to move
@@ -239,6 +249,9 @@ elsewhere (buttons, tags) but never crowd or distort the mark itself.
   block. Generous, never cramped.
 - **Motion** (where relevant): playful but purposeful. A hover lift, a single
   reveal. Bouncy easing fits the rounded, human personality. Keep it light.
+- **Video:** **AI-generated and motion-graphic only. No talking-head or UGC
+  video.** Reels and video ads are designed motion (animated type, mockups,
+  charts), not filmed people.
 - **Iconography:** simple rounded line icons, consistent stroke, matching the
   doodle hand.
 
@@ -252,6 +265,7 @@ When briefing an AI design tool with this system, explicitly forbid:
   doodles** instead.
 - Dark "premium tech" grounds. FOMO is **bright and optimistic on white**.
 - Cold corporate stock photography of people in offices.
+- Talking-head or UGC-style video. Video is **AI-generated / motion-graphic only**.
 - Firing all brand colors at once. Use **one accent per layout, Blue leads**.
 - Sharp, condensed, or harsh typography. The brand is **rounded and friendly**.
 - Dropping the pill or capsule motif, or distorting the logo.
@@ -307,6 +321,12 @@ gentle in an error message.
    price-to-result comparison versus legacy agencies.
 5. **Move first.** Early movers compound their lead. *Proof:* the cost of
    waiting.
+
+### Proof points (use to back claims)
+- **Customers:** Noom, PetMeds, PB5star, HiveCast.fm, AbundaBox.
+- **Pricing proof:** agency depth ($5–10k/mo work) at SaaS price
+  ($2,750–3,500/mo), 14-day free trial, month to month.
+- Pull specific results and testimonials into creatives as they are approved.
 
 ### Proven taglines & lines (use verbatim or as patterns)
 - **Sales & leads without paid ads.** *(primary hero line)*
